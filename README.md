@@ -1,20 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Illuminati Lodge of New York
 
-# Run and deploy your AI Studio app
+A distinguished brotherhood dedicated to enlightenment, prosperity, and the betterment of humanity.
 
-This contains everything you need to run your app locally.
+## Live Site
+This site is automatically deployed to GitHub Pages.
 
-View your app in AI Studio: https://ai.studio/apps/cf2db3f5-750b-463c-a0f9-8038cc0a0616
+## Tech Stack
+- **React** (Vite)
+- **Tailwind CSS**
+- **Lucide React** (Icons)
+- **Motion** (Animations)
 
-## Run Locally
+## Development
+To run the project locally:
+```bash
+npm install
+npm run dev
+```
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deployment
+The project is configured with GitHub Actions. Any push to the `main` branch will automatically trigger a build and deploy to GitHub Pages.
