@@ -91,7 +91,7 @@ export default function ContactForm() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-[#FFFFFF] mb-1">Phone</h3>
-              <p className="text-[#B0B0B0]">+1 (212) 555-0177</p>
+              <p className="text-[#B0B0B0]">+1 (425) 543-7872</p>
             </div>
           </div>
 
