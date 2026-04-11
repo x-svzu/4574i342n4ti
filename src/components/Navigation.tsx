@@ -38,8 +38,8 @@ export default function Navigation() {
           <Link href="/" className="flex items-center group">
             <div className="flex items-center gap-3">
               <div className="relative group">
-                <IlluminatiLogo size={28} />
-                <div className="absolute inset-0 rounded-full bg-[#d4af37]/10 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                <IlluminatiLogo size={40} />
+                <div className="absolute inset-0 rounded-full bg-[#d4af37]/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
               </div>
               <div className="hidden sm:block">
                 <h1 className="font-cinzel text-lg font-semibold text-[#d4af37] tracking-wide leading-tight">
@@ -150,7 +150,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center">
             <Link href="/membership">
               <button className="inline-flex items-center justify-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] text-sm font-semibold px-5 py-2 rounded transition-all duration-300 hover:shadow-lg hover:shadow-[#d4af37]/20 cursor-pointer">
-                <IlluminatiLogo size={16} />
+                <IlluminatiLogo size={20} />
                 Seek Enlightenment
               </button>
             </Link>
@@ -237,7 +237,7 @@ export default function Navigation() {
             
             <Link href="/membership" onClick={() => setMobileMenuOpen(false)}>
               <button className="w-full inline-flex items-center justify-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] text-base font-semibold px-4 py-3 rounded transition-all duration-300">
-                <IlluminatiLogo size={18} />
+                <IlluminatiLogo size={22} />
                 Seek Enlightenment
               </button>
             </Link>

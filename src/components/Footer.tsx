@@ -50,8 +50,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-4">
-              <IlluminatiLogo size={36} />
+            <Link href="/" className="flex items-center gap-4 mb-6">
+              <IlluminatiLogo size={48} />
               <div>
                 <h2 className="font-cinzel text-xl font-semibold text-[#d4af37] tracking-wide">
                   Illuminati Lodge
