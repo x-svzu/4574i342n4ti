@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/NextLink";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQAccordion from "./FAQAccordion";

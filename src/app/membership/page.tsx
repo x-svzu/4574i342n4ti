@@ -174,17 +174,19 @@ export default function MembershipPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#application">
-              <button className="inline-flex items-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] font-semibold px-8 py-4 rounded transition-all duration-300 cursor-pointer">
-                <IlluminatiLogo size={20} />
-                Begin Your Application
-              </button>
-            </a>
-            <a href="#benefits">
-              <button className="inline-flex items-center gap-2 border border-[#d4af37]/40 text-[#d4af37] hover:bg-[#d4af37]/10 font-semibold px-8 py-4 rounded transition-all duration-300 cursor-pointer">
-                Explore Benefits
-              </button>
-            </a>
+            <button 
+              onClick={() => document.getElementById("application")?.scrollIntoView({ behavior: "smooth" })}
+              className="inline-flex items-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] font-semibold px-8 py-4 rounded transition-all duration-300 cursor-pointer"
+            >
+              <IlluminatiLogo size={20} />
+              Begin Your Application
+            </button>
+            <button 
+              onClick={() => document.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" })}
+              className="inline-flex items-center gap-2 border border-[#d4af37]/40 text-[#d4af37] hover:bg-[#d4af37]/10 font-semibold px-8 py-4 rounded transition-all duration-300 cursor-pointer"
+            >
+              Explore Benefits
+            </button>
           </div>
         </div>
       </section>
@@ -442,12 +444,13 @@ export default function MembershipPage() {
           <h2 className="text-xl md:text-2xl font-bold text-[#FFFFFF] mb-3 font-cinzel">Ready to Begin Your Journey?</h2>
           <p className="text-[#B0B0B0] text-sm mb-6">Join thousands of seekers who have found purpose and wisdom within our brotherhood.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#application">
-              <button className="inline-flex items-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] font-semibold px-6 py-3 rounded transition-all duration-300 cursor-pointer text-sm">
-                <IlluminatiLogo size={18} />
-                Apply for Membership
-              </button>
-            </a>
+            <button 
+              onClick={() => document.getElementById("application")?.scrollIntoView({ behavior: "smooth" })}
+              className="inline-flex items-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] font-semibold px-6 py-3 rounded transition-all duration-300 cursor-pointer text-sm"
+            >
+              <IlluminatiLogo size={18} />
+              Apply for Membership
+            </button>
             <Link href="/contact">
               <button className="inline-flex items-center gap-2 border border-[#d4af37]/40 text-[#d4af37] hover:bg-[#d4af37]/10 font-semibold px-6 py-3 rounded transition-all duration-300 cursor-pointer text-sm">
                 Learn More

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/NextLink";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Eye, ChevronLeft, ArrowRight, Users, BookOpen, Star, Shield, Globe, Heart, Sparkles, Crown, Building } from "lucide-react";
