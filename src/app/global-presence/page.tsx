@@ -4,6 +4,8 @@ import Link from "@/components/NextLink";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
+import IlluminatiLogo from "@/components/IlluminatiLogo";
 import { Globe, Users, Building, Award, ChevronLeft } from "lucide-react";
 
 export default function GlobalPresencePage() {
@@ -65,23 +67,32 @@ export default function GlobalPresencePage() {
           </div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
           
-          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-6">
-              <ChevronLeft className="w-4 h-4" />
-              Back to Home
-            </Link>
-            
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Initiatives</p>
-            
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
-              Global Presence
-            </h1>
-            
-            <div className="flex items-center gap-3 justify-center mb-8">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
-              <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
-            </div>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <ScrollReveal direction="down">
+              <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-10 font-medium">
+                <ChevronLeft className="w-4 h-4" />
+                Back to Home
+              </Link>
+              
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <IlluminatiLogo size={80} />
+                  <div className="absolute inset-0 bg-[#d4af37]/20 blur-2xl rounded-full -z-10 scale-150" />
+                </div>
+              </div>
+              
+              <p className="text-[#d4af37] text-xs tracking-[0.4em] mb-6 uppercase font-bold">Initiatives</p>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFFFFF] mb-8 font-serif tracking-tight">
+                Global Presence
+              </h1>
+              
+              <div className="flex items-center gap-4 justify-center mb-10">
+                <div className="w-24 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
+                <div className="w-3 h-3 bg-[#d4af37] rotate-45 shadow-[0_0_10px_#d4af37]" />
+                <div className="w-24 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -106,26 +117,20 @@ export default function GlobalPresencePage() {
             {/* Statistics */}
             <section className="mb-16">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div className="p-6 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg text-center hover:border-[#d4af37]/30 transition-colors">
-                  <Globe className="w-8 h-8 text-[#d4af37] mx-auto mb-3" />
-                  <p className="text-2xl font-bold text-[#FFFFFF]">120+</p>
-                  <p className="text-sm text-[#B0B0B0]">Countries</p>
-                </div>
-                <div className="p-6 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg text-center hover:border-[#d4af37]/30 transition-colors">
-                  <Building className="w-8 h-8 text-[#d4af37] mx-auto mb-3" />
-                  <p className="text-2xl font-bold text-[#FFFFFF]">150+</p>
-                  <p className="text-sm text-[#B0B0B0]">Lodges</p>
-                </div>
-                <div className="p-6 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg text-center hover:border-[#d4af37]/30 transition-colors">
-                  <Users className="w-8 h-8 text-[#d4af37] mx-auto mb-3" />
-                  <p className="text-2xl font-bold text-[#FFFFFF]">50K+</p>
-                  <p className="text-sm text-[#B0B0B0]">Members</p>
-                </div>
-                <div className="p-6 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg text-center hover:border-[#d4af37]/30 transition-colors">
-                  <Award className="w-8 h-8 text-[#d4af37] mx-auto mb-3" />
-                  <p className="text-2xl font-bold text-[#FFFFFF]">248+</p>
-                  <p className="text-sm text-[#B0B0B0]">Years</p>
-                </div>
+                {[
+                  { icon: Globe, value: "120+", label: "Countries" },
+                  { icon: Building, value: "150+", label: "Lodges" },
+                  { icon: Users, value: "50K+", label: "Members" },
+                  { icon: Award, value: "248+", label: "Years" }
+                ].map((stat, index) => (
+                  <ScrollReveal key={index} delay={index * 0.1}>
+                    <div className="p-8 bg-[#0D2137] border border-[#d4af37]/10 rounded-2xl text-center hover:border-[#d4af37]/40 transition-all duration-500 card-shine group shadow-xl">
+                      <stat.icon className="w-10 h-10 text-[#d4af37] mx-auto mb-4 group-hover:scale-110 transition-transform duration-500" />
+                      <p className="text-3xl font-bold text-[#FFFFFF] mb-1">{stat.value}</p>
+                      <p className="text-xs text-[#8A8A8A] font-bold tracking-widest uppercase">{stat.label}</p>
+                    </div>
+                  </ScrollReveal>
+                ))}
               </div>
             </section>
 
@@ -138,23 +143,25 @@ export default function GlobalPresencePage() {
 
             {/* Regional Presence */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#FFFFFF] mb-6 font-cinzel text-center">Regional Presence</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <h2 className="text-3xl font-bold text-[#FFFFFF] mb-10 font-serif text-center">Regional Presence</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {regions.map((region, index) => (
-                  <div key={index} className="p-6 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-all duration-300">
-                    <h3 className="text-xl font-semibold text-[#d4af37] mb-3">{region.name}</h3>
-                    <p className="text-[#B0B0B0] text-base leading-relaxed mb-4">{region.description}</p>
-                    <div className="flex gap-6">
-                      <div>
-                        <p className="text-lg font-bold text-[#FFFFFF]">{region.lodges}</p>
-                        <p className="text-xs text-[#666]">Lodges</p>
-                      </div>
-                      <div>
-                        <p className="text-lg font-bold text-[#FFFFFF]">{region.members}</p>
-                        <p className="text-xs text-[#666]">Members</p>
+                  <ScrollReveal key={index} delay={index * 0.1}>
+                    <div className="p-8 bg-[#0D2137] border border-[#d4af37]/10 rounded-2xl hover:border-[#d4af37]/40 transition-all duration-500 card-shine group shadow-xl h-full">
+                      <h3 className="text-2xl font-bold text-[#d4af37] mb-4 font-serif">{region.name}</h3>
+                      <p className="text-[#B0B0B0] text-base leading-relaxed mb-8 font-light">{region.description}</p>
+                      <div className="flex gap-10">
+                        <div>
+                          <p className="text-2xl font-bold text-[#FFFFFF] mb-1">{region.lodges}</p>
+                          <p className="text-xs text-[#8A8A8A] font-bold tracking-widest uppercase">Lodges</p>
+                        </div>
+                        <div>
+                          <p className="text-2xl font-bold text-[#FFFFFF] mb-1">{region.members}</p>
+                          <p className="text-xs text-[#8A8A8A] font-bold tracking-widest uppercase">Members</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </section>

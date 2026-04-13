@@ -3,7 +3,9 @@
 import Link from "@/components/NextLink";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Star, ChevronLeft } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
+import IlluminatiLogo from "@/components/IlluminatiLogo";
+import { Star, ChevronLeft, Quote } from "lucide-react";
 
 export default function TestimonialsPage() {
   const testimonials = [
@@ -70,23 +72,32 @@ export default function TestimonialsPage() {
           </div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
           
-          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-6">
-              <ChevronLeft className="w-4 h-4" />
-              Back to Home
-            </Link>
-            
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Membership</p>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
-              Testimonials
-            </h1>
-            
-            <div className="flex items-center gap-3 justify-center mb-8">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
-              <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
-            </div>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <ScrollReveal direction="down">
+              <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-10 font-medium">
+                <ChevronLeft className="w-4 h-4" />
+                Back to Home
+              </Link>
+              
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <IlluminatiLogo size={80} />
+                  <div className="absolute inset-0 bg-[#d4af37]/20 blur-2xl rounded-full -z-10 scale-150" />
+                </div>
+              </div>
+              
+              <p className="text-[#d4af37] text-xs tracking-[0.4em] mb-6 uppercase font-bold">Membership</p>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFFFFF] mb-8 font-serif tracking-tight">
+                Testimonials
+              </h1>
+              
+              <div className="flex items-center gap-4 justify-center mb-10">
+                <div className="w-24 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
+                <div className="w-3 h-3 bg-[#d4af37] rotate-45 shadow-[0_0_10px_#d4af37]" />
+                <div className="w-24 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -110,23 +121,31 @@ export default function TestimonialsPage() {
 
             {/* Testimonials Grid */}
             <section className="mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="p-6 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-all duration-300 card-shine">
-                    <div className="flex items-center gap-1 mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-[#d4af37] text-[#d4af37]" />
-                      ))}
+                  <ScrollReveal key={index} delay={index * 0.1}>
+                    <div className="relative p-8 bg-[#0D2137] border border-[#d4af37]/10 rounded-2xl hover:border-[#d4af37]/40 transition-all duration-500 card-shine group shadow-xl h-full flex flex-col">
+                      <Quote className="absolute top-6 right-8 w-12 h-12 text-[#d4af37]/5 group-hover:text-[#d4af37]/10 transition-colors duration-500" />
+                      
+                      <div className="flex items-center gap-1 mb-6">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-[#d4af37] text-[#d4af37] shadow-[0_0_5px_#d4af37]" />
+                        ))}
+                      </div>
+                      
+                      <p className="text-[#E0E0E0] text-lg leading-relaxed mb-8 italic font-light flex-grow">
+                        &ldquo;{testimonial.content}&rdquo;
+                      </p>
+                      
+                      <div className="border-t border-[#d4af37]/10 pt-6 mt-auto">
+                        <p className="text-[#d4af37] font-bold text-lg font-serif mb-1">{testimonial.name}</p>
+                        <p className="text-[#8A8A8A] text-sm font-medium tracking-wide">{testimonial.role} • {testimonial.location}</p>
+                        <div className="inline-flex items-center gap-2 mt-3 px-3 py-1 bg-[#d4af37]/5 rounded-full border border-[#d4af37]/10">
+                          <span className="text-[#d4af37] text-[10px] font-bold tracking-widest uppercase">Member for {testimonial.years}</span>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-[#E0E0E0] text-base leading-relaxed mb-6 italic">
-                      &ldquo;{testimonial.content}&rdquo;
-                    </p>
-                    <div className="border-t border-[#d4af37]/10 pt-4">
-                      <p className="text-[#d4af37] font-semibold">{testimonial.name}</p>
-                      <p className="text-[#B0B0B0] text-sm">{testimonial.role} • {testimonial.location}</p>
-                      <p className="text-[#666] text-xs mt-1">Member for {testimonial.years}</p>
-                    </div>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </section>

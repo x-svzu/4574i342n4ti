@@ -4,6 +4,8 @@ import Link from "@/components/NextLink";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
+import IlluminatiLogo from "@/components/IlluminatiLogo";
 import { Crown, Globe, Users, Heart, BookOpen, Shield, Star, Sparkles, ChevronLeft } from "lucide-react";
 
 export default function MembershipRewardsPage() {
@@ -69,23 +71,32 @@ export default function MembershipRewardsPage() {
           </div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
           
-          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-6">
-              <ChevronLeft className="w-4 h-4" />
-              Back to Home
-            </Link>
-            
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Membership</p>
-            
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
-              Membership Rewards
-            </h1>
-            
-            <div className="flex items-center gap-3 justify-center mb-8">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
-              <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
-            </div>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <ScrollReveal direction="down">
+              <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-10 font-medium">
+                <ChevronLeft className="w-4 h-4" />
+                Back to Home
+              </Link>
+              
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <IlluminatiLogo size={80} />
+                  <div className="absolute inset-0 bg-[#d4af37]/20 blur-2xl rounded-full -z-10 scale-150" />
+                </div>
+              </div>
+              
+              <p className="text-[#d4af37] text-xs tracking-[0.4em] mb-6 uppercase font-bold">Membership</p>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFFFFF] mb-8 font-serif tracking-tight">
+                Membership Rewards
+              </h1>
+              
+              <div className="flex items-center gap-4 justify-center mb-10">
+                <div className="w-24 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
+                <div className="w-3 h-3 bg-[#d4af37] rotate-45 shadow-[0_0_10px_#d4af37]" />
+                <div className="w-24 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -109,21 +120,23 @@ export default function MembershipRewardsPage() {
 
             {/* Benefits Grid */}
             <section className="mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {benefits.map((benefit, index) => {
                   const Icon = benefit.icon;
                   return (
-                    <div key={index} className="p-6 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-all duration-300 group">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-lg bg-[#d4af37]/10 flex items-center justify-center flex-shrink-0 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-[#0A1929] transition-all duration-300">
-                          <Icon className="w-6 h-6" />
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-semibold text-[#FFFFFF] mb-2 group-hover:text-[#d4af37] transition-colors">{benefit.title}</h3>
-                          <p className="text-[#B0B0B0] text-base leading-relaxed">{benefit.description}</p>
+                    <ScrollReveal key={index} delay={index * 0.1}>
+                      <div className="group h-full p-8 bg-[#0D2137] border border-[#d4af37]/10 rounded-2xl hover:border-[#d4af37]/40 transition-all duration-500 card-shine hover:-translate-y-2 shadow-2xl hover:bg-[#0D1B2A]">
+                        <div className="flex items-start gap-6">
+                          <div className="w-14 h-14 rounded-xl bg-[#d4af37]/10 flex items-center justify-center flex-shrink-0 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-[#0A1929] transition-all duration-500 shadow-lg">
+                            <Icon className="w-7 h-7" />
+                          </div>
+                          <div>
+                            <h3 className="text-2xl font-bold text-[#FFFFFF] mb-3 group-hover:text-[#d4af37] transition-colors font-serif">{benefit.title}</h3>
+                            <p className="text-[#B0B0B0] text-base leading-relaxed font-light">{benefit.description}</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </ScrollReveal>
                   );
                 })}
               </div>

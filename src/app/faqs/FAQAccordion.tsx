@@ -2,6 +2,7 @@
 
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 const faqs = [
   {
@@ -51,22 +52,36 @@ export default function FAQAccordion() {
 
   return (
     <div className="space-y-4">
-      {faqs.map((faq, index) => (
-        <div key={index} className="border border-[#d4af37]/10 rounded-lg overflow-hidden">
-          <button
-            onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            className="w-full p-6 flex items-center justify-between bg-[#0D2137] hover:bg-[#0D1B2A] transition-colors text-left"
-          >
-            <span className="text-[#FFFFFF] font-medium">{faq.question}</span>
-            <ChevronDown className={`w-5 h-5 text-[#d4af37] transition-transform ${openIndex === index ? "rotate-180" : ""}`} />
-          </button>
-          {openIndex === index && (
-            <div className="p-6 bg-[#0A1929] border-t border-[#d4af37]/10">
-              <p className="text-[#E0E0E0] leading-relaxed">{faq.answer}</p>
-            </div>
-          )}
-        </div>
-      ))}
+      {faqs.map((faq, index) => {
+        const isOpen = openIndex === index;
+        return (
+          <div key={index} className={`border transition-colors duration-300 rounded-xl overflow-hidden ${isOpen ? 'border-[#d4af37]/40 bg-[#0D1B2A]' : 'border-[#d4af37]/10 bg-[#0D2137]'}`}>
+            <button
+              onClick={() => setOpenIndex(isOpen ? null : index)}
+              className="w-full p-6 flex items-center justify-between hover:bg-[#d4af37]/5 transition-colors text-left group"
+            >
+              <span className={`font-serif text-lg transition-colors duration-300 ${isOpen ? 'text-[#d4af37]' : 'text-[#FFFFFF] group-hover:text-[#d4af37]'}`}>{faq.question}</span>
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-[#d4af37] text-[#0A1929] rotate-180' : 'bg-[#d4af37]/10 text-[#d4af37]'}`}>
+                <ChevronDown className="w-5 h-5" />
+              </div>
+            </button>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <div className="px-6 pb-6 pt-2 bg-[#0A1929]/50 border-t border-[#d4af37]/10">
+                    <p className="text-[#B0B0B0] leading-relaxed font-light text-base">{faq.answer}</p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        );
+      })}
     </div>
   );
 }

@@ -4,7 +4,9 @@ import Link from "@/components/NextLink";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Globe, Heart, BookOpen, Users, TreePine, Droplets, ArrowRight } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
+import IlluminatiLogo from "@/components/IlluminatiLogo";
+import { Globe, Heart, BookOpen, Users, TreePine, Droplets, ArrowRight, ChevronLeft } from "lucide-react";
 
 export default function GlobalInitiativesPage() {
   const initiatives = [
@@ -84,18 +86,32 @@ export default function GlobalInitiativesPage() {
           </div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
           
-          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Philanthropy</p>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
-              Global Initiatives
-            </h1>
-            
-            <div className="flex items-center gap-3 justify-center mb-8">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
-              <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
-            </div>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <ScrollReveal direction="down">
+              <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-10 font-medium">
+                <ChevronLeft className="w-4 h-4" />
+                Back to Home
+              </Link>
+              
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <IlluminatiLogo size={80} />
+                  <div className="absolute inset-0 bg-[#d4af37]/20 blur-2xl rounded-full -z-10 scale-150" />
+                </div>
+              </div>
+              
+              <p className="text-[#d4af37] text-xs tracking-[0.4em] mb-6 uppercase font-bold">Philanthropy</p>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFFFFF] mb-8 font-serif tracking-tight">
+                Global Initiatives
+              </h1>
+              
+              <div className="flex items-center gap-4 justify-center mb-10">
+                <div className="w-24 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
+                <div className="w-3 h-3 bg-[#d4af37] rotate-45 shadow-[0_0_10px_#d4af37]" />
+                <div className="w-24 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -127,25 +143,26 @@ export default function GlobalInitiativesPage() {
                 challenges facing humanity today.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {initiatives.map((initiative, index) => {
                   const Icon = initiative.icon;
                   return (
-                    <div 
-                      key={index} 
-                      className="p-6 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-all duration-300 group card-shine"
-                    >
-                      <div className="w-14 h-14 rounded-lg bg-[#d4af37]/10 flex items-center justify-center flex-shrink-0 text-[#d4af37] mb-4 group-hover:bg-[#d4af37]/20 transition-colors">
-                        <Icon className="w-7 h-7" />
+                    <ScrollReveal key={index} delay={index * 0.1}>
+                      <div 
+                        className="group h-full p-8 bg-[#0D2137] border border-[#d4af37]/10 rounded-2xl hover:border-[#d4af37]/40 transition-all duration-500 card-shine hover:-translate-y-2 shadow-2xl hover:bg-[#0D1B2A]"
+                      >
+                        <div className="w-14 h-14 rounded-xl bg-[#d4af37]/10 flex items-center justify-center flex-shrink-0 text-[#d4af37] mb-6 group-hover:bg-[#d4af37] group-hover:text-[#0A1929] transition-all duration-500 shadow-lg">
+                          <Icon className="w-7 h-7" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-[#FFFFFF] mb-4 font-serif group-hover:text-[#d4af37] transition-colors">{initiative.title}</h3>
+                        <p className="text-[#B0B0B0] text-base leading-relaxed mb-6 font-light">{initiative.description}</p>
+                        
+                        <div className="pt-6 border-t border-[#d4af37]/10">
+                          <div className="text-3xl font-bold text-[#d4af37] mb-1">{initiative.impactNumber}</div>
+                          <div className="text-xs text-[#8A8A8A] font-bold tracking-widest uppercase">{initiative.impactLabel}</div>
+                        </div>
                       </div>
-                      <h3 className="text-xl font-semibold text-[#FFFFFF] mb-3 font-cinzel">{initiative.title}</h3>
-                      <p className="text-[#E0E0E0] text-sm leading-relaxed mb-4">{initiative.description}</p>
-                      
-                      <div className="pt-4 border-t border-[#d4af37]/10">
-                        <div className="text-2xl font-bold text-[#d4af37] mb-1">{initiative.impactNumber}</div>
-                        <div className="text-xs text-[#B0B0B0]">{initiative.impactLabel}</div>
-                      </div>
-                    </div>
+                    </ScrollReveal>
                   );
                 })}
               </div>
