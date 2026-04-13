@@ -103,14 +103,16 @@ export default function LeadershipPage() {
             
             {/* Introduction */}
             <section className="mb-16">
-              <div className="space-y-6 text-[#E0E0E0] text-lg leading-relaxed text-center max-w-3xl mx-auto">
-                <p>
-                  The Illuminati Lodge of New York is guided by leaders who have demonstrated exceptional dedication to our principles and have risen through the degrees of our order through merit, service, and wisdom.
-                </p>
-                <p>
-                  While the identities of our leadership remain private, their commitment to enlightenment and service is unwavering. Each has dedicated decades to the pursuit of knowledge and the betterment of humanity.
-                </p>
-              </div>
+              <ScrollReveal>
+                <div className="space-y-6 text-[#E0E0E0] text-lg leading-relaxed text-center max-w-3xl mx-auto">
+                  <p>
+                    The Illuminati Lodge of New York is guided by leaders who have demonstrated exceptional dedication to our principles and have risen through the degrees of our order through merit, service, and wisdom.
+                  </p>
+                  <p>
+                    While the identities of our leadership remain private, their commitment to enlightenment and service is unwavering. Each has dedicated decades to the pursuit of knowledge and the betterment of humanity.
+                  </p>
+                </div>
+              </ScrollReveal>
             </section>
 
             {/* Decorative Divider */}
@@ -122,10 +124,12 @@ export default function LeadershipPage() {
 
             {/* Featured Image */}
             <section className="mb-16">
-              <div className="relative rounded-xl overflow-hidden bg-[#0D2137] border border-[#d4af37]/20 h-64 md:h-80 flex items-center justify-center">
-                <Crown className="w-32 h-32 text-[#d4af37]/20" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
-              </div>
+              <ScrollReveal>
+                <div className="relative rounded-xl overflow-hidden bg-[#0D2137] border border-[#d4af37]/20 h-64 md:h-80 flex items-center justify-center">
+                  <Crown className="w-32 h-32 text-[#d4af37]/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
+                </div>
+              </ScrollReveal>
             </section>
 
             {/* Leadership Grid */}

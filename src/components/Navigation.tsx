@@ -182,7 +182,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[55] bg-[#0D2137] lg:hidden overflow-y-auto pt-4">
+        <div className="fixed inset-0 z-[55] bg-[#0D2137] lg:hidden overflow-y-auto pt-4 animate-in fade-in slide-in-from-bottom-4 duration-300 will-change-transform">
           <div className="px-6 py-4 space-y-6 pb-20">
             <a 
               href="/" 

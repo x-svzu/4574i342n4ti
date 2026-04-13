@@ -148,14 +148,16 @@ export default function OurHistoryPage() {
 
         {/* Introduction */}
         <section className="relative py-16 bg-[#0A1929]">
-          <div className="max-w-3xl mx-auto px-6 text-center">
-            <p className="text-[#E0E0E0] text-lg leading-relaxed">
-              From our origins in 1776 Bavaria to our modern presence in New York, the Illuminati 
-              has weathered persecution, adapted to change, and emerged stronger through every trial. 
-              Our history is one of resilience, wisdom, and the unbroken transmission of sacred 
-              knowledge from generation to generation.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto px-6 text-center">
+              <p className="text-[#E0E0E0] text-lg leading-relaxed">
+                From our origins in 1776 Bavaria to our modern presence in New York, the Illuminati 
+                has weathered persecution, adapted to change, and emerged stronger through every trial. 
+                Our history is one of resilience, wisdom, and the unbroken transmission of sacred 
+                knowledge from generation to generation.
+              </p>
+            </div>
+          </ScrollReveal>
         </section>
 
         {/* Timeline Section - Clean, no images */}
@@ -211,58 +213,68 @@ export default function OurHistoryPage() {
         {/* Founder Section */}
         <section className="relative py-16 bg-[#0A1929]">
           <div className="max-w-4xl mx-auto px-6">
-            <div className="text-center mb-10">
-              <span className="text-[#d4af37] text-xs font-bold tracking-wider uppercase mb-2 block">Founder</span>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] font-cinzel">
-                Adam Weishaupt
-              </h2>
-              <p className="text-[#B0B0B0] mt-2">1748 - 1830</p>
-            </div>
+            <ScrollReveal>
+              <div className="text-center mb-10">
+                <span className="text-[#d4af37] text-xs font-bold tracking-wider uppercase mb-2 block">Founder</span>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] font-cinzel">
+                  Adam Weishaupt
+                </h2>
+                <p className="text-[#B0B0B0] mt-2">1748 - 1830</p>
+              </div>
+            </ScrollReveal>
             
             <div className="max-w-2xl mx-auto">
-              <div className="relative w-48 h-64 mx-auto mb-8 rounded-lg overflow-hidden border border-[#d4af37]/30 bg-[#0D2137] flex items-center justify-center">
-                <Users className="w-24 h-24 text-[#d4af37]/20" />
-              </div>
-              <p className="text-[#E0E0E0] text-base leading-relaxed mb-4 text-center">
-                Born in Ingolstadt, Bavaria, Adam Weishaupt was a professor of canon law who grew 
-                disillusioned with the religious and political restrictions of his time. Inspired by 
-                the Enlightenment philosophers, he envisioned a society dedicated to reason, moral 
-                perfection, and freedom from superstition.
-              </p>
-              <p className="text-[#E0E0E0] text-base leading-relaxed mb-6 text-center">
-                On May 1, 1776, he gathered five devoted students and founded what would become the 
-                most influential secret society in history.
-              </p>
-              <div className="p-5 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg text-center">
-                <p className="text-[#d4af37] italic text-sm">
-                  &ldquo;The illumination, the instruction of men, is the highest duty of every 
-                  enlightened being.&rdquo;
+              <ScrollReveal direction="right">
+                <div className="relative w-48 h-64 mx-auto mb-8 rounded-lg overflow-hidden border border-[#d4af37]/30 bg-[#0D2137] flex items-center justify-center">
+                  <Users className="w-24 h-24 text-[#d4af37]/20" />
+                </div>
+              </ScrollReveal>
+              <ScrollReveal direction="left">
+                <p className="text-[#E0E0E0] text-base leading-relaxed mb-4 text-center">
+                  Born in Ingolstadt, Bavaria, Adam Weishaupt was a professor of canon law who grew 
+                  disillusioned with the religious and political restrictions of his time. Inspired by 
+                  the Enlightenment philosophers, he envisioned a society dedicated to reason, moral 
+                  perfection, and freedom from superstition.
                 </p>
-                <p className="text-[#B0B0B0] text-xs mt-2">— Adam Weishaupt</p>
-              </div>
+                <p className="text-[#E0E0E0] text-base leading-relaxed mb-6 text-center">
+                  On May 1, 1776, he gathered five devoted students and founded what would become the 
+                  most influential secret society in history.
+                </p>
+              </ScrollReveal>
+              <ScrollReveal>
+                <div className="p-5 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg text-center">
+                  <p className="text-[#d4af37] italic text-sm">
+                    &ldquo;The illumination, the instruction of men, is the highest duty of every 
+                    enlightened being.&rdquo;
+                  </p>
+                  <p className="text-[#B0B0B0] text-xs mt-2">— Adam Weishaupt</p>
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </section>
 
         {/* Legacy Section */}
         <section className="relative py-16 bg-[#0D2137]">
-          <div className="max-w-3xl mx-auto px-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-6 border border-[#d4af37]/30">
-              <BookOpen className="w-6 h-6 text-[#d4af37]" />
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto px-6 text-center">
+              <div className="w-12 h-12 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-6 border border-[#d4af37]/30">
+                <BookOpen className="w-6 h-6 text-[#d4af37]" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-semibold text-[#FFFFFF] mb-6 font-cinzel">
+                A Living Legacy
+              </h3>
+              <p className="text-[#E0E0E0] text-base leading-relaxed mb-4">
+                For 248 years, the Illuminati has stood as a guardian of sacred knowledge and a 
+                beacon for those seeking enlightenment. From the darkness of persecution to the 
+                light of modern understanding, our brotherhood has adapted while remaining true to 
+                the principles that gave it birth.
+              </p>
+              <p className="text-[#d4af37] italic font-cinzel text-sm">
+                The past informs our present; the present shapes our future.
+              </p>
             </div>
-            <h3 className="text-xl md:text-2xl font-semibold text-[#FFFFFF] mb-6 font-cinzel">
-              A Living Legacy
-            </h3>
-            <p className="text-[#E0E0E0] text-base leading-relaxed mb-4">
-              For 248 years, the Illuminati has stood as a guardian of sacred knowledge and a 
-              beacon for those seeking enlightenment. From the darkness of persecution to the 
-              light of modern understanding, our brotherhood has adapted while remaining true to 
-              the principles that gave it birth.
-            </p>
-            <p className="text-[#d4af37] italic font-cinzel text-sm">
-              The past informs our present; the present shapes our future.
-            </p>
-          </div>
+          </ScrollReveal>
         </section>
 
         {/* CTA Section - Clean */}

@@ -211,46 +211,50 @@ export default function OurMissionPage() {
             {/* Our Vision for the Future */}
             <section className="mb-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
-                    Our Vision for the Future
-                  </h2>
-                  <p className="text-[#E0E0E0] text-lg leading-relaxed mb-6">
-                    We envision a world where every individual has access to knowledge, where wisdom guides 
-                    decision-making at every level of society, and where humanity works together toward 
-                    common goals. This vision drives everything we do - from our local community programs 
-                    to our global initiatives.
-                  </p>
-                  <p className="text-[#E0E0E0] text-lg leading-relaxed mb-8">
-                    The path to this future is not short, nor is it easy. But with patience, dedication, 
-                    and the collective efforts of enlightened individuals across the globe, we believe it 
-                    is achievable.
-                  </p>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    {visionPoints.map((point, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center flex-shrink-0">
-                          <point.icon className="w-5 h-5 text-[#d4af37]" />
-                        </div>
-                        <div>
-                          <h4 className="text-sm font-semibold text-[#FFFFFF] mb-1">{point.title}</h4>
-                          <p className="text-xs text-[#E0E0E0]">{point.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="relative h-80 lg:h-[500px] rounded-lg overflow-hidden border border-[#d4af37]/20 bg-[#0D2137] flex items-center justify-center">
-                  <Sparkles className="w-32 h-32 text-[#d4af37]/20" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-[#FFFFFF] font-cinzel text-center text-lg">
-                      A Legacy of Enlightenment
+                <ScrollReveal direction="right">
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
+                      Our Vision for the Future
+                    </h2>
+                    <p className="text-[#E0E0E0] text-lg leading-relaxed mb-6">
+                      We envision a world where every individual has access to knowledge, where wisdom guides 
+                      decision-making at every level of society, and where humanity works together toward 
+                      common goals. This vision drives everything we do - from our local community programs 
+                      to our global initiatives.
                     </p>
+                    <p className="text-[#E0E0E0] text-lg leading-relaxed mb-8">
+                      The path to this future is not short, nor is it easy. But with patience, dedication, 
+                      and the collective efforts of enlightened individuals across the globe, we believe it 
+                      is achievable.
+                    </p>
+                    
+                    <div className="grid grid-cols-2 gap-4">
+                      {visionPoints.map((point, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center flex-shrink-0">
+                            <point.icon className="w-5 h-5 text-[#d4af37]" />
+                          </div>
+                          <div>
+                            <h4 className="text-sm font-semibold text-[#FFFFFF] mb-1">{point.title}</h4>
+                            <p className="text-xs text-[#E0E0E0]">{point.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </ScrollReveal>
+                
+                <ScrollReveal direction="left">
+                  <div className="relative h-80 lg:h-[500px] rounded-lg overflow-hidden border border-[#d4af37]/20 bg-[#0D2137] flex items-center justify-center">
+                    <Sparkles className="w-32 h-32 text-[#d4af37]/20" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <p className="text-[#FFFFFF] font-cinzel text-center text-lg">
+                        A Legacy of Enlightenment
+                      </p>
+                    </div>
+                  </div>
+                </ScrollReveal>
               </div>
             </section>
 
@@ -305,26 +309,29 @@ export default function OurMissionPage() {
 
             {/* Core Values */}
             <section className="mb-20">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel text-center">
-                Core Values That Guide Us
-              </h2>
-              <p className="text-[#E0E0E0] text-lg text-center max-w-3xl mx-auto mb-12">
-                These principles form the foundation of our brotherhood, passed down through generations 
-                and upheld by every member.
-              </p>
+              <ScrollReveal>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel text-center">
+                  Core Values That Guide Us
+                </h2>
+                <p className="text-[#E0E0E0] text-lg text-center max-w-3xl mx-auto mb-12">
+                  These principles form the foundation of our brotherhood, passed down through generations 
+                  and upheld by every member.
+                </p>
+              </ScrollReveal>
               
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {coreValues.map((value, index) => (
-                  <div 
-                    key={index} 
-                    className="p-6 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-colors text-center"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-4">
-                      <Sparkles className="w-5 h-5 text-[#d4af37]" />
+                  <ScrollReveal key={index} delay={index * 0.1}>
+                    <div 
+                      className="p-6 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-colors text-center h-full"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-4">
+                        <Sparkles className="w-5 h-5 text-[#d4af37]" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-[#d4af37] mb-2 font-cinzel">{value.title}</h3>
+                      <p className="text-sm text-[#E0E0E0]">{value.description}</p>
                     </div>
-                    <h3 className="text-lg font-semibold text-[#d4af37] mb-2 font-cinzel">{value.title}</h3>
-                    <p className="text-sm text-[#E0E0E0]">{value.description}</p>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </section>

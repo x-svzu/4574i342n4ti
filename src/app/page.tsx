@@ -95,36 +95,66 @@ export default function HomePage() {
         <div className="flex-1 flex items-center justify-center">
           <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-16 pb-8">
             {/* Logo */}
-            <div className="mb-8 flex justify-center">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="mb-8 flex justify-center"
+            >
               <div className="relative group">
                 <IlluminatiLogo size={112} />
                 <div className="absolute inset-0 rounded-full bg-[#d4af37]/10 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
               </div>
-            </div>
+            </motion.div>
 
-            <p className="text-[#d4af37] text-sm tracking-[0.2em] mb-6 uppercase font-medium">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-[#d4af37] text-sm tracking-[0.2em] mb-6 uppercase font-medium"
+            >
               Enlightenment Through Knowledge
-            </p>
+            </motion.p>
 
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight text-[#FFFFFF] font-serif tracking-tight">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight text-[#FFFFFF] font-serif tracking-tight"
+            >
               Welcome to the <span className="text-[#d4af37]">Illuminati Lodge</span> of New York
-            </h1>
+            </motion.h1>
 
             {/* Decorative Line */}
-            <div className="flex items-center justify-center gap-4 mb-6">
+            <motion.div 
+              initial={{ opacity: 0, width: 0 }}
+              animate={{ opacity: 1, width: "auto" }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="flex items-center justify-center gap-4 mb-6 overflow-hidden"
+            >
               <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
               <div className="w-1.5 h-1.5 bg-[#d4af37] rotate-45" />
               <IlluminatiLogo size={20} />
               <div className="w-1.5 h-1.5 bg-[#d4af37] rotate-45" />
               <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
-            </div>
+            </motion.div>
 
-            <p className="text-[#E0E0E0] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.8 }}
+              className="text-[#E0E0E0] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+            >
               For over two centuries, we have stood as guardians of ancient wisdom, guiding seekers toward the light of knowledge, prosperity, and universal understanding. Join a distinguished brotherhood of global leaders dedicated to the betterment of humanity.
-            </p>
+            </motion.p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 md:mb-20 relative z-20">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 md:20 relative z-20"
+            >
               <Link href="/membership">
                 <button className="inline-flex items-center justify-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] font-semibold px-8 py-6 text-base rounded transition-all duration-300 hover:shadow-lg hover:shadow-[#d4af37]/20 cursor-pointer pointer-events-auto">
                   <IlluminatiLogo size={24} />
@@ -136,7 +166,7 @@ export default function HomePage() {
                   Discover Our Heritage
                 </button>
               </Link>
-            </div>
+            </motion.div>
 
             {/* Scroll Indicator */}
             <button

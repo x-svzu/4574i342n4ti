@@ -167,35 +167,39 @@ export default function WhoWeArePage() {
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#d4af37]/20 to-[#d4af37]/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#d4af37]/20 shadow-2xl bg-[#0D2137] flex items-center justify-center">
-                <Users className="w-24 h-24 text-[#d4af37]/20" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
-                {/* Decorative corners */}
-                <div className="frame-corner frame-corner-tl" />
-                <div className="frame-corner frame-corner-tr" />
-                <div className="frame-corner frame-corner-bl" />
-                <div className="frame-corner frame-corner-br" />
+            <ScrollReveal direction="right">
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#d4af37]/20 to-[#d4af37]/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#d4af37]/20 shadow-2xl bg-[#0D2137] flex items-center justify-center">
+                  <Users className="w-24 h-24 text-[#d4af37]/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
+                  {/* Decorative corners */}
+                  <div className="frame-corner frame-corner-tl" />
+                  <div className="frame-corner frame-corner-tr" />
+                  <div className="frame-corner frame-corner-bl" />
+                  <div className="frame-corner frame-corner-br" />
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
             
-            <div className="space-y-6">
-              <p className="text-xl text-[#E0E0E0] leading-relaxed">
-                On <span className="text-[#d4af37]">May 1, 1776</span>, in the shadow of the University of Ingolstadt, 
-                Professor Adam Weishaupt gathered five devoted scholars to form what would become the most 
-                influential secret society in human history.
-              </p>
-              <p className="text-lg text-[#B0B0B0] leading-relaxed">
-                The Order of the Illuminati was founded on principles that would challenge the religious and 
-                political dogmas of the age: reason over superstition, knowledge over ignorance, and the 
-                pursuit of human perfection through enlightenment.
-              </p>
-              <p className="text-lg text-[#B0B0B0] leading-relaxed">
-                From these humble beginnings, a movement was born that would attract the greatest minds 
-                of the era and shape the course of history across continents and centuries.
-              </p>
-            </div>
+            <ScrollReveal direction="left">
+              <div className="space-y-6">
+                <p className="text-xl text-[#E0E0E0] leading-relaxed">
+                  On <span className="text-[#d4af37]">May 1, 1776</span>, in the shadow of the University of Ingolstadt, 
+                  Professor Adam Weishaupt gathered five devoted scholars to form what would become the most 
+                  influential secret society in human history.
+                </p>
+                <p className="text-lg text-[#B0B0B0] leading-relaxed">
+                  The Order of the Illuminati was founded on principles that would challenge the religious and 
+                  political dogmas of the age: reason over superstition, knowledge over ignorance, and the 
+                  pursuit of human perfection through enlightenment.
+                </p>
+                <p className="text-lg text-[#B0B0B0] leading-relaxed">
+                  From these humble beginnings, a movement was born that would attract the greatest minds 
+                  of the era and shape the course of history across continents and centuries.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -285,27 +289,31 @@ export default function WhoWeArePage() {
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6">
-              <p className="text-xl text-[#E0E0E0] leading-relaxed">
-                Our temple stands as a physical manifestation of spiritual principles, every stone 
-                and symbol carefully placed to reflect the sacred geometry that underlies all creation.
-              </p>
-              <p className="text-lg text-[#B0B0B0] leading-relaxed">
-                Here, members gather to receive instruction, perform rituals, and connect with the 
-                ancient wisdom that flows through our lineage.
-              </p>
-            </div>
-            <div className="relative group">
-              <div className="absolute -inset-2 bg-[#d4af37]/10 rounded-2xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="relative aspect-video rounded-2xl overflow-hidden border border-[#d4af37]/20 bg-[#0D2137] flex items-center justify-center">
-                <Building className="w-32 h-32 text-[#d4af37]/20" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
-                <div className="frame-corner frame-corner-tl" />
-                <div className="frame-corner frame-corner-tr" />
-                <div className="frame-corner frame-corner-bl" />
-                <div className="frame-corner frame-corner-br" />
+            <ScrollReveal direction="right">
+              <div className="space-y-6">
+                <p className="text-xl text-[#E0E0E0] leading-relaxed">
+                  Our temple stands as a physical manifestation of spiritual principles, every stone 
+                  and symbol carefully placed to reflect the sacred geometry that underlies all creation.
+                </p>
+                <p className="text-lg text-[#B0B0B0] leading-relaxed">
+                  Here, members gather to receive instruction, perform rituals, and connect with the 
+                  ancient wisdom that flows through our lineage.
+                </p>
               </div>
-            </div>
+            </ScrollReveal>
+            <ScrollReveal direction="left">
+              <div className="relative group">
+                <div className="absolute -inset-2 bg-[#d4af37]/10 rounded-2xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="relative aspect-video rounded-2xl overflow-hidden border border-[#d4af37]/20 bg-[#0D2137] flex items-center justify-center">
+                  <Building className="w-32 h-32 text-[#d4af37]/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
+                  <div className="frame-corner frame-corner-tl" />
+                  <div className="frame-corner frame-corner-tr" />
+                  <div className="frame-corner frame-corner-bl" />
+                  <div className="frame-corner frame-corner-br" />
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

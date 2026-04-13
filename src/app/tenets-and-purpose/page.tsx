@@ -150,30 +150,32 @@ export default function TenetsPage() {
 
             {/* Introduction */}
             <section className="mb-20">
-              <div className="relative p-8 rounded-lg overflow-hidden border border-[#d4af37]/20">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#112240] via-[#0D2137] to-[#112240]" />
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
-                
-                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h2 className="text-2xl font-bold text-[#FFFFFF] mb-4 font-cinzel">The Foundation of Our Order</h2>
-                    <p className="text-[#E0E0E0] text-lg leading-relaxed mb-4">
-                      For over two centuries, the tenets of our order have provided guidance and purpose 
-                      to countless seekers of truth. These are not mere words but sacred covenants that 
-                      every member pledges to uphold throughout their journey.
-                    </p>
-                    <p className="text-[#E0E0E0] text-lg leading-relaxed">
-                      Each tenet represents a pillar of wisdom, supporting the temple of enlightenment 
-                      that we build together. Together, they form a complete philosophy for living a 
-                      life of purpose and meaning.
-                    </p>
-                  </div>
-                  <div className="relative h-48 lg:h-64 rounded-lg overflow-hidden border border-[#d4af37]/10 bg-[#0D2137] flex items-center justify-center">
-                    <Eye className="w-24 h-24 text-[#d4af37]/20" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
+              <ScrollReveal>
+                <div className="relative p-8 rounded-lg overflow-hidden border border-[#d4af37]/20">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#112240] via-[#0D2137] to-[#112240]" />
+                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
+                  
+                  <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <h2 className="text-2xl font-bold text-[#FFFFFF] mb-4 font-cinzel">The Foundation of Our Order</h2>
+                      <p className="text-[#E0E0E0] text-lg leading-relaxed mb-4">
+                        For over two centuries, the tenets of our order have provided guidance and purpose 
+                        to countless seekers of truth. These are not mere words but sacred covenants that 
+                        every member pledges to uphold throughout their journey.
+                      </p>
+                      <p className="text-[#E0E0E0] text-lg leading-relaxed">
+                        Each tenet represents a pillar of wisdom, supporting the temple of enlightenment 
+                        that we build together. Together, they form a complete philosophy for living a 
+                        life of purpose and meaning.
+                      </p>
+                    </div>
+                    <div className="relative h-48 lg:h-64 rounded-lg overflow-hidden border border-[#d4af37]/10 bg-[#0D2137] flex items-center justify-center">
+                      <Eye className="w-24 h-24 text-[#d4af37]/20" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             </section>
 
             {/* Decorative Divider */}
@@ -245,31 +247,35 @@ export default function TenetsPage() {
 
             {/* The Path of Illumination */}
             <section className="mb-20">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel text-center">
-                The Path of Illumination
-              </h2>
-              <p className="text-[#E0E0E0] text-lg text-center max-w-3xl mx-auto mb-12">
-                The journey from darkness to light follows a structured path, with each stage building 
-                upon the last toward ultimate enlightenment.
-              </p>
+              <ScrollReveal>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel text-center">
+                  The Path of Illumination
+                </h2>
+                <p className="text-[#E0E0E0] text-lg text-center max-w-3xl mx-auto mb-12">
+                  The journey from darkness to light follows a structured path, with each stage building 
+                  upon the last toward ultimate enlightenment.
+                </p>
+              </ScrollReveal>
               
               <div className="relative max-w-4xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                   {pathStages.map((stage, index) => (
-                    <div key={index} className="relative">
-                      <div className="p-6 bg-[#0D2137] border border-[#d4af37]/20 rounded-lg text-center hover:border-[#d4af37]/40 transition-colors h-full">
-                        <div className="w-14 h-14 rounded-full bg-[#d4af37] flex items-center justify-center mx-auto mb-4">
-                          <span className="text-[#0A1929] font-bold text-lg font-cinzel">{stage.stage}</span>
+                    <ScrollReveal key={index} delay={index * 0.1}>
+                      <div className="relative h-full">
+                        <div className="p-6 bg-[#0D2137] border border-[#d4af37]/20 rounded-lg text-center hover:border-[#d4af37]/40 transition-colors h-full">
+                          <div className="w-14 h-14 rounded-full bg-[#d4af37] flex items-center justify-center mx-auto mb-4">
+                            <span className="text-[#0A1929] font-bold text-lg font-cinzel">{stage.stage}</span>
+                          </div>
+                          <h3 className="text-lg font-semibold text-[#FFFFFF] mb-2 font-cinzel">{stage.title}</h3>
+                          <p className="text-sm text-[#E0E0E0]">{stage.description}</p>
                         </div>
-                        <h3 className="text-lg font-semibold text-[#FFFFFF] mb-2 font-cinzel">{stage.title}</h3>
-                        <p className="text-sm text-[#E0E0E0]">{stage.description}</p>
+                        {index < pathStages.length - 1 && (
+                          <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+                            <ArrowRight className="w-6 h-6 text-[#d4af37]/40" />
+                          </div>
+                        )}
                       </div>
-                      {index < pathStages.length - 1 && (
-                        <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
-                          <ArrowRight className="w-6 h-6 text-[#d4af37]/40" />
-                        </div>
-                      )}
-                    </div>
+                    </ScrollReveal>
                   ))}
                 </div>
               </div>
@@ -285,29 +291,33 @@ export default function TenetsPage() {
             {/* Code of the Enlightened */}
             <section className="mb-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
-                    Code of the Enlightened
-                  </h2>
-                  <p className="text-[#E0E0E0] text-lg leading-relaxed mb-6">
-                    The code by which all members must live forms a framework for ethical behavior and 
-                    spiritual advancement. These principles have guided our order for centuries.
-                  </p>
-                  
-                  <div className="space-y-3">
-                    {codePoints.map((point, index) => (
-                      <div key={index} className="flex items-start gap-3 p-3 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-colors">
-                        <Star className="w-5 h-5 text-[#d4af37] flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-[#E0E0E0]">{point}</span>
-                      </div>
-                    ))}
+                <ScrollReveal direction="right">
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
+                      Code of the Enlightened
+                    </h2>
+                    <p className="text-[#E0E0E0] text-lg leading-relaxed mb-6">
+                      The code by which all members must live forms a framework for ethical behavior and 
+                      spiritual advancement. These principles have guided our order for centuries.
+                    </p>
+                    
+                    <div className="space-y-3">
+                      {codePoints.map((point, index) => (
+                        <div key={index} className="flex items-start gap-3 p-3 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-colors">
+                          <Star className="w-5 h-5 text-[#d4af37] flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-[#E0E0E0]">{point}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </ScrollReveal>
                 
-                <div className="relative h-80 lg:h-[500px] rounded-lg overflow-hidden border border-[#d4af37]/20 bg-[#0D2137] flex items-center justify-center">
-                  <Building className="w-32 h-32 text-[#d4af37]/20" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
-                </div>
+                <ScrollReveal direction="left">
+                  <div className="relative h-80 lg:h-[500px] rounded-lg overflow-hidden border border-[#d4af37]/20 bg-[#0D2137] flex items-center justify-center">
+                    <Building className="w-32 h-32 text-[#d4af37]/20" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
+                  </div>
+                </ScrollReveal>
               </div>
             </section>
 

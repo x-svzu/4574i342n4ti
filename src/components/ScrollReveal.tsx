@@ -38,7 +38,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={variants}
-      className={className}
+      className={`${className} will-change-[opacity,transform]`}
     >
       {children}
     </motion.div>

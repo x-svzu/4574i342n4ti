@@ -210,29 +210,33 @@ export default function MembershipPage() {
       {/* Application Process */}
       <section className="relative py-16 bg-[#0A1929]">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">The Path to Membership</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel">Application Process</h2>
-            <p className="text-[#B0B0B0] text-base max-w-2xl mx-auto">
-              Our thorough selection process ensures those who join are truly committed to enlightenment.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">The Path to Membership</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel">Application Process</h2>
+              <p className="text-[#B0B0B0] text-base max-w-2xl mx-auto">
+                Our thorough selection process ensures those who join are truly committed to enlightenment.
+              </p>
+            </div>
+          </ScrollReveal>
           
           <div className="relative">
             <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-[#d4af37] via-[#d4af37]/30 to-transparent" />
             
             <div className="space-y-6">
               {applicationSteps.map((step, index) => (
-                <div key={index} className="relative pl-12">
-                  <div className="absolute left-2 top-2 w-4 h-4 rounded-full bg-[#d4af37] border-2 border-[#0A1929]" />
-                  <div className="p-5 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-colors">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-[#d4af37] font-bold text-sm">{step.step}</span>
-                      <h3 className="text-base font-semibold text-[#FFFFFF]">{step.title}</h3>
+                <ScrollReveal key={index} delay={index * 0.1} direction="left">
+                  <div className="relative pl-12">
+                    <div className="absolute left-2 top-2 w-4 h-4 rounded-full bg-[#d4af37] border-2 border-[#0A1929]" />
+                    <div className="p-5 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-colors">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="text-[#d4af37] font-bold text-sm">{step.step}</span>
+                        <h3 className="text-base font-semibold text-[#FFFFFF]">{step.title}</h3>
+                      </div>
+                      <p className="text-[#B0B0B0] text-sm">{step.description}</p>
                     </div>
-                    <p className="text-[#B0B0B0] text-sm">{step.description}</p>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -244,20 +248,24 @@ export default function MembershipPage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/20 to-transparent" />
         
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">What We Seek</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel">Membership Requirements</h2>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">What We Seek</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel">Membership Requirements</h2>
+            </div>
+          </ScrollReveal>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {requirements.map((req, index) => (
-              <div key={index} className="p-5 text-center bg-[#0A1929] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-all">
-                <div className="w-10 h-10 mx-auto rounded-lg bg-[#d4af37]/10 flex items-center justify-center mb-3 text-[#d4af37]">
-                  <req.icon className="w-5 h-5" />
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="p-5 text-center bg-[#0A1929] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-all h-full">
+                  <div className="w-10 h-10 mx-auto rounded-lg bg-[#d4af37]/10 flex items-center justify-center mb-3 text-[#d4af37]">
+                    <req.icon className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-[#FFFFFF] mb-1">{req.title}</h3>
+                  <p className="text-xs text-[#B0B0B0]">{req.description}</p>
                 </div>
-                <h3 className="text-sm font-semibold text-[#FFFFFF] mb-1">{req.title}</h3>
-                <p className="text-xs text-[#B0B0B0]">{req.description}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -440,119 +448,123 @@ export default function MembershipPage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/20 to-transparent" />
         
         <div className="max-w-3xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Take the First Step</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel">Membership Application</h2>
-            <p className="text-[#B0B0B0] text-base">Complete this form to begin your journey. All information is kept strictly confidential.</p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Take the First Step</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel">Membership Application</h2>
+              <p className="text-[#B0B0B0] text-base">Complete this form to begin your journey. All information is kept strictly confidential.</p>
+            </div>
+          </ScrollReveal>
 
-          <form onSubmit={handleSubmit} className="p-6 bg-[#0A1929] border border-[#d4af37]/20 rounded-lg">
-            {/* Personal Information */}
-            <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
-                <Users className="w-4 h-4" />
-                Personal Information
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs text-[#d4af37] mb-1.5">First Name *</label>
-                  <input type="text" required value={formData.firstName} onChange={(e) => setFormData({...formData, firstName: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.firstName ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37]`} />
-                  {errors.firstName && <p className="text-red-500 text-[10px] mt-1">{errors.firstName}</p>}
-                </div>
-                <div>
-                  <label className="block text-xs text-[#d4af37] mb-1.5">Last Name *</label>
-                  <input type="text" required value={formData.lastName} onChange={(e) => setFormData({...formData, lastName: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.lastName ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37]`} />
-                  {errors.lastName && <p className="text-red-500 text-[10px] mt-1">{errors.lastName}</p>}
-                </div>
-                <div>
-                  <label className="block text-xs text-[#d4af37] mb-1.5">Email *</label>
-                  <input type="email" required value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.email ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37]`} />
-                  {errors.email && <p className="text-red-500 text-[10px] mt-1">{errors.email}</p>}
-                </div>
-                <div>
-                  <label className="block text-xs text-[#d4af37] mb-1.5">Phone *</label>
-                  <input type="tel" required value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.phone ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37]`} placeholder="+1 234 567 8900" />
-                  {errors.phone && <p className="text-red-500 text-[10px] mt-1">{errors.phone}</p>}
-                </div>
-                <div className="md:col-span-2">
-                  <label className="block text-xs text-[#d4af37] mb-1.5">Country *</label>
-                  <select 
-                    required 
-                    value={formData.country} 
-                    onChange={(e) => setFormData({...formData, country: e.target.value})} 
-                    className={`w-full bg-[#0D2137] border ${errors.country ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37] appearance-none cursor-pointer`}
-                  >
-                    <option value="" disabled>Select your country</option>
-                    {countries.map((country) => (
-                      <option key={country} value={country} className="bg-[#0D2137]">
-                        {country}
-                      </option>
-                    ))}
-                  </select>
-                  {errors.country && <p className="text-red-500 text-[10px] mt-1">{errors.country}</p>}
+          <ScrollReveal>
+            <form onSubmit={handleSubmit} className="p-6 bg-[#0A1929] border border-[#d4af37]/20 rounded-lg">
+              {/* Personal Information */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
+                  <Users className="w-4 h-4" />
+                  Personal Information
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs text-[#d4af37] mb-1.5">First Name *</label>
+                    <input type="text" required value={formData.firstName} onChange={(e) => setFormData({...formData, firstName: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.firstName ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37]`} />
+                    {errors.firstName && <p className="text-red-500 text-[10px] mt-1">{errors.firstName}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-xs text-[#d4af37] mb-1.5">Last Name *</label>
+                    <input type="text" required value={formData.lastName} onChange={(e) => setFormData({...formData, lastName: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.lastName ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37]`} />
+                    {errors.lastName && <p className="text-red-500 text-[10px] mt-1">{errors.lastName}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-xs text-[#d4af37] mb-1.5">Email *</label>
+                    <input type="email" required value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.email ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37]`} />
+                    {errors.email && <p className="text-red-500 text-[10px] mt-1">{errors.email}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-xs text-[#d4af37] mb-1.5">Phone *</label>
+                    <input type="tel" required value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.phone ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37]`} placeholder="+1 234 567 8900" />
+                    {errors.phone && <p className="text-red-500 text-[10px] mt-1">{errors.phone}</p>}
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block text-xs text-[#d4af37] mb-1.5">Country *</label>
+                    <select 
+                      required 
+                      value={formData.country} 
+                      onChange={(e) => setFormData({...formData, country: e.target.value})} 
+                      className={`w-full bg-[#0D2137] border ${errors.country ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37] appearance-none cursor-pointer`}
+                    >
+                      <option value="" disabled>Select your country</option>
+                      {countries.map((country) => (
+                        <option key={country} value={country} className="bg-[#0D2137]">
+                          {country}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.country && <p className="text-red-500 text-[10px] mt-1">{errors.country}</p>}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Professional Information */}
-            <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
-                <Briefcase className="w-4 h-4" />
-                Professional Information
-              </h3>
-              <div>
-                <label className="block text-xs text-[#d4af37] mb-1.5">Occupation *</label>
-                <input type="text" required value={formData.occupation} onChange={(e) => setFormData({...formData, occupation: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.occupation ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37]`} />
-                {errors.occupation && <p className="text-red-500 text-[10px] mt-1">{errors.occupation}</p>}
+              {/* Professional Information */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
+                  <Briefcase className="w-4 h-4" />
+                  Professional Information
+                </h3>
+                <div>
+                  <label className="block text-xs text-[#d4af37] mb-1.5">Occupation *</label>
+                  <input type="text" required value={formData.occupation} onChange={(e) => setFormData({...formData, occupation: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.occupation ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37]`} />
+                  {errors.occupation && <p className="text-red-500 text-[10px] mt-1">{errors.occupation}</p>}
+                </div>
               </div>
-            </div>
 
-            {/* Motivation */}
-            <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
-                <BookOpen className="w-4 h-4" />
-                Your Motivation
-              </h3>
-              <div>
-                <label className="block text-xs text-[#d4af37] mb-1.5">Why do you seek enlightenment? *</label>
-                <textarea required rows={4} value={formData.motivation} onChange={(e) => setFormData({...formData, motivation: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.motivation ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37] resize-none`} placeholder="Share your motivation for seeking membership..." />
-                {errors.motivation && <p className="text-red-500 text-[10px] mt-1">{errors.motivation}</p>}
+              {/* Motivation */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
+                  <BookOpen className="w-4 h-4" />
+                  Your Motivation
+                </h3>
+                <div>
+                  <label className="block text-xs text-[#d4af37] mb-1.5">Why do you seek enlightenment? *</label>
+                  <textarea required rows={4} value={formData.motivation} onChange={(e) => setFormData({...formData, motivation: e.target.value})} className={`w-full bg-[#0D2137] border ${errors.motivation ? 'border-red-500' : 'border-[#d4af37]/30'} rounded px-3 py-2.5 text-sm text-[#FFFFFF] focus:outline-none focus:border-[#d4af37] resize-none`} placeholder="Share your motivation for seeking membership..." />
+                  {errors.motivation && <p className="text-red-500 text-[10px] mt-1">{errors.motivation}</p>}
+                </div>
               </div>
-            </div>
 
-            {/* Sacred Pledge */}
-            <div className="mb-6">
-              <h3 className="text-sm font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
-                <Shield className="w-4 h-4" />
-                Sacred Pledge
-              </h3>
-              <div className="space-y-3">
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" checked={formData.agreeTerms} onChange={(e) => setFormData({...formData, agreeTerms: e.target.checked})} className="mt-0.5 w-4 h-4 rounded border-[#d4af37]/30 bg-[#0D2137] text-[#d4af37] focus:ring-[#d4af37]" />
-                  <span className="text-xs text-[#E0E0E0]">I have read and agree to the Terms of Service and Privacy Policy. I understand that membership is a privilege, not a right. *</span>
-                </label>
-                {errors.agreeTerms && <p className="text-red-500 text-[10px] ml-7">{errors.agreeTerms}</p>}
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" checked={formData.agreeSecrecy} onChange={(e) => setFormData({...formData, agreeSecrecy: e.target.checked})} className="mt-0.5 w-4 h-4 rounded border-[#d4af37]/30 bg-[#0D2137] text-[#d4af37] focus:ring-[#d4af37]" />
-                  <span className="text-xs text-[#E0E0E0]">I pledge to maintain the secrecy of our sacred knowledge and protect the confidentiality of our brotherhood. *</span>
-                </label>
-                {errors.agreeSecrecy && <p className="text-red-500 text-[10px] ml-7">{errors.agreeSecrecy}</p>}
+              {/* Sacred Pledge */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
+                  <Shield className="w-4 h-4" />
+                  Sacred Pledge
+                </h3>
+                <div className="space-y-3">
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input type="checkbox" checked={formData.agreeTerms} onChange={(e) => setFormData({...formData, agreeTerms: e.target.checked})} className="mt-0.5 w-4 h-4 rounded border-[#d4af37]/30 bg-[#0D2137] text-[#d4af37] focus:ring-[#d4af37]" />
+                    <span className="text-xs text-[#E0E0E0]">I have read and agree to the Terms of Service and Privacy Policy. I understand that membership is a privilege, not a right. *</span>
+                  </label>
+                  {errors.agreeTerms && <p className="text-red-500 text-[10px] ml-7">{errors.agreeTerms}</p>}
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input type="checkbox" checked={formData.agreeSecrecy} onChange={(e) => setFormData({...formData, agreeSecrecy: e.target.checked})} className="mt-0.5 w-4 h-4 rounded border-[#d4af37]/30 bg-[#0D2137] text-[#d4af37] focus:ring-[#d4af37]" />
+                    <span className="text-xs text-[#E0E0E0]">I pledge to maintain the secrecy of our sacred knowledge and protect the confidentiality of our brotherhood. *</span>
+                  </label>
+                  {errors.agreeSecrecy && <p className="text-red-500 text-[10px] ml-7">{errors.agreeSecrecy}</p>}
+                </div>
               </div>
-            </div>
 
-            <button 
-              type="submit" 
-              disabled={isSubmitting}
-              className={`w-full inline-flex items-center justify-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] font-semibold px-6 py-3.5 rounded transition-all duration-300 cursor-pointer text-sm ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-            >
-              {isSubmitting ? (
-                <div className="w-5 h-5 border-2 border-[#0A1929]/30 border-t-[#0A1929] rounded-full animate-spin" />
-              ) : (
-                <Send className="w-4 h-4" />
-              )}
-              {isSubmitting ? "Verifying Credentials..." : "Submit Application"}
-            </button>
-          </form>
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className={`w-full inline-flex items-center justify-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] font-semibold px-6 py-3.5 rounded transition-all duration-300 cursor-pointer text-sm ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+              >
+                {isSubmitting ? (
+                  <div className="w-5 h-5 border-2 border-[#0A1929]/30 border-t-[#0A1929] rounded-full animate-spin" />
+                ) : (
+                  <Send className="w-4 h-4" />
+                )}
+                {isSubmitting ? "Verifying Credentials..." : "Submit Application"}
+              </button>
+            </form>
+          </ScrollReveal>
 
           <p className="text-center text-xs text-[#666] mt-4 italic">
             All applications are reviewed by our membership committee. Please allow 2-4 weeks for a response.

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'motion/react';
 import PageTransition from './components/PageTransition';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import HomePage from './app/page';
 import WhoWeAre from './app/who-we-are/page';
 import OurMission from './app/our-mission/page';
@@ -55,6 +56,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToTopButton />
       <AnimatedRoutes />
     </Router>
   );
