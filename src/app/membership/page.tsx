@@ -35,27 +35,6 @@ const requirements = [
   { icon: Eye, title: "Vision", description: "Commitment to enlightenment" },
 ];
 
-const membershipTiers = [
-  {
-    level: "Apprentice Degree",
-    subtitle: "First Degree",
-    description: "The beginning of your journey into the mysteries of our order.",
-    benefits: ["Foundational teachings", "Community gatherings", "Monthly mentorship", "Digital library access"],
-  },
-  {
-    level: "Fellowcraft Degree",
-    subtitle: "Second Degree",
-    description: "Deeper immersion into sacred knowledge and responsibilities.",
-    benefits: ["Advanced archives", "Regional events", "Personal mentor", "Leadership opportunities"],
-  },
-  {
-    level: "Master Degree",
-    subtitle: "Third Degree",
-    description: "The highest degree of understanding and service.",
-    benefits: ["Complete teachings access", "Global council", "Ceremony leadership", "International network"],
-  },
-];
-
 const countries = [
   "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
   "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan",
@@ -286,34 +265,172 @@ export default function MembershipPage() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/10 to-transparent" />
       </section>
 
-      {/* Membership Tiers */}
-      <section className="relative py-16 bg-[#0A1929]">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Degrees of Enlightenment</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel">Membership Tiers</h2>
-            <p className="text-[#B0B0B0] text-base max-w-2xl mx-auto">Progress through the degrees as you deepen your understanding.</p>
+      {/* Structure of the Order: The Degrees of Illumination */}
+      <section className="relative py-24 bg-[#0A1929] overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-5 pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#d4af37] rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#d4af37] rounded-full blur-[120px]" />
+        </div>
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <ScrollReveal direction="down">
+              <p className="text-[#d4af37] text-xs tracking-[0.5em] mb-4 uppercase font-bold">The Path of Initiation</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#FFFFFF] mb-6 font-serif tracking-tight">Structure of the Order</h2>
+              <div className="w-24 h-1 bg-[#d4af37] mx-auto mb-8" />
+              <p className="text-[#B0B0B0] text-lg max-w-3xl mx-auto leading-relaxed font-light">
+                The path of the Illuminati is one of structured progression, intellectual refinement, and gradual initiation. 
+                Our Order is delineated into three distinct Classes, each representing a deeper level of commitment and influence.
+              </p>
+            </ScrollReveal>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {membershipTiers.map((tier, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div className={`relative h-full p-8 bg-[#0D2137] border rounded-2xl transition-all duration-500 hover:bg-[#0D1B2A] hover:-translate-y-2 shadow-2xl ${index === 2 ? 'border-[#d4af37]/60' : 'border-[#d4af37]/10'}`}>
-                  {index === 2 && <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#d4af37] text-[#0A1929] text-xs font-bold rounded-full shadow-[0_0_20px_rgba(212,175,55,0.4)]">HIGHEST DEGREE</div>}
-                  <h3 className="text-2xl font-bold text-[#FFFFFF] mb-1 font-serif">{tier.level}</h3>
-                  <p className="text-[#d4af37] text-xs mb-4 font-semibold uppercase tracking-widest">{tier.subtitle}</p>
-                  <p className="text-[#B0B0B0] text-base mb-6 font-light leading-relaxed">{tier.description}</p>
-                  <div className="space-y-3">
-                    {tier.benefits.map((benefit, idx) => (
-                      <div key={idx} className="flex items-center gap-3">
-                        <Check className="w-4 h-4 text-[#d4af37] flex-shrink-0" />
-                        <span className="text-sm text-[#E0E0E0] font-light">{benefit}</span>
-                      </div>
-                    ))}
+          <div className="space-y-32">
+            {/* Class I: The Nursery */}
+            <ScrollReveal>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div className="lg:col-span-4 sticky top-24">
+                  <div className="p-8 bg-[#0D2137] border-l-4 border-[#d4af37] rounded-r-2xl shadow-2xl">
+                    <span className="text-[#d4af37] text-sm font-bold tracking-widest uppercase mb-2 block">Class I</span>
+                    <h3 className="text-3xl font-bold text-[#FFFFFF] mb-4 font-serif">The Nursery</h3>
+                    <blockquote className="text-[#E0E0E0] italic text-sm border-l border-[#d4af37]/30 pl-4 mb-6">
+                      "Dedicated to the cultivation of the mind, logical inquiry, intellectual liberation, and absolute self-mastery."
+                    </blockquote>
+                    <p className="text-[#B0B0B0] text-sm leading-relaxed">
+                      Entry into the Order begins here. The initiate is stripped of societal conditioning and taught to observe the world through the unclouded lens of reason.
+                    </p>
                   </div>
                 </div>
-              </ScrollReveal>
-            ))}
+                <div className="lg:col-span-8 space-y-6">
+                  {[
+                    { degree: "Degree 0", title: "The Aspirant", subtitle: "The Probationer", desc: "The initial stage of observation and testing of character." },
+                    { degree: "Degree I", title: "Minerval", subtitle: "The Student of Reason", desc: "Immersion into the foundational philosophies of enlightenment." },
+                    { degree: "Degree II", title: "Illuminatus Minor", subtitle: "The Practitioner", desc: "The application of reason in daily life and personal conduct." }
+                  ].map((d, i) => (
+                    <div key={i} className="group p-6 bg-[#0D2137]/40 border border-[#d4af37]/10 rounded-xl hover:border-[#d4af37]/40 transition-all duration-500 hover:bg-[#0D2137]/60">
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                          <span className="text-[#d4af37] text-[10px] font-bold tracking-[0.2em] uppercase">{d.degree}</span>
+                          <h4 className="text-xl font-bold text-[#FFFFFF] font-serif group-hover:text-[#d4af37] transition-colors">{d.title}</h4>
+                          <p className="text-[#d4af37]/60 text-xs italic mb-2">{d.subtitle}</p>
+                        </div>
+                        <p className="text-[#B0B0B0] text-sm max-w-md md:text-right font-light">{d.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Class II: The Masonic Grades */}
+            <ScrollReveal>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div className="lg:col-span-4 lg:order-2 sticky top-24">
+                  <div className="p-8 bg-[#0D2137] border-r-4 border-[#d4af37] rounded-l-2xl shadow-2xl text-right">
+                    <span className="text-[#d4af37] text-sm font-bold tracking-widest uppercase mb-2 block">Class II</span>
+                    <h3 className="text-3xl font-bold text-[#FFFFFF] mb-4 font-serif">The Masonic Grades</h3>
+                    <blockquote className="text-[#E0E0E0] italic text-sm border-r border-[#d4af37]/30 pr-4 mb-6">
+                      "Focused on the cultivation of societal influence, fraternal bonds, professional elevation, and strict organizational ethics."
+                    </blockquote>
+                    <p className="text-[#B0B0B0] text-sm leading-relaxed">
+                      Having mastered the self, the initiate steps into the wider network. This class concerns itself with the practical application of our philosophies in the material world.
+                    </p>
+                  </div>
+                </div>
+                <div className="lg:col-span-8 lg:order-1 space-y-6">
+                  {[
+                    { degree: "Degree III", title: "Apprentice of the Craft", desc: "Learning the tools of societal influence and fraternal cooperation." },
+                    { degree: "Degree IV", title: "Fellow of the Order", desc: "Deepening the bonds of brotherhood and shared purpose." },
+                    { degree: "Degree V", title: "Master of Influence", desc: "Exerting enlightened leadership within professional and social circles." },
+                    { degree: "Degree VI", title: "Illuminatus Major", subtitle: "The Social Architect", desc: "Designing structures that guide society toward progress." },
+                    { degree: "Degree VII", title: "Illuminatus Dirigens", subtitle: "The Director", desc: "Overseeing regional operations and strategic initiatives." }
+                  ].map((d, i) => (
+                    <div key={i} className="group p-6 bg-[#0D2137]/40 border border-[#d4af37]/10 rounded-xl hover:border-[#d4af37]/40 transition-all duration-500 hover:bg-[#0D2137]/60">
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                          <span className="text-[#d4af37] text-[10px] font-bold tracking-[0.2em] uppercase">{d.degree}</span>
+                          <h4 className="text-xl font-bold text-[#FFFFFF] font-serif group-hover:text-[#d4af37] transition-colors">{d.title}</h4>
+                          {d.subtitle && <p className="text-[#d4af37]/60 text-xs italic mb-2">{d.subtitle}</p>}
+                        </div>
+                        <p className="text-[#B0B0B0] text-sm max-w-md md:text-right font-light">{d.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Class III: The Mysteries */}
+            <ScrollReveal>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div className="lg:col-span-4 sticky top-24">
+                  <div className="p-8 bg-[#0A1929] border border-[#d4af37]/30 rounded-2xl shadow-[0_0_50px_rgba(212,175,55,0.1)] relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#d4af37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <span className="text-[#d4af37] text-sm font-bold tracking-widest uppercase mb-2 block relative z-10">Class III</span>
+                    <h3 className="text-3xl font-bold text-[#FFFFFF] mb-4 font-serif relative z-10">The Mysteries</h3>
+                    <blockquote className="text-[#E0E0E0] italic text-sm border-l border-[#d4af37]/30 pl-4 mb-6 relative z-10">
+                      "Reserved for executive strategy, global philanthropic stewardship, and high philosophical governance."
+                    </blockquote>
+                    <p className="text-[#B0B0B0] text-sm leading-relaxed relative z-10">
+                      The innermost circle. Those who attain the Mysteries are tasked with actively shaping the future through strategic benevolence and enlightened leadership.
+                    </p>
+                  </div>
+                </div>
+                <div className="lg:col-span-8 space-y-6">
+                  {[
+                    { degree: "Degree VIII", title: "Presbyter", subtitle: "The Priest of Philosophy", desc: "Guardians of the Order's highest philosophical tenets." },
+                    { degree: "Degree IX", title: "Regent", subtitle: "The Prince of the Order", desc: "Executive leadership and sovereign governance of the brotherhood." },
+                    { degree: "Degree X", title: "Magus", subtitle: "The Master of Strategy", desc: "Architects of global impact and long-term philanthropic vision." },
+                    { degree: "Degree XI", title: "Rex", subtitle: "The Sovereign of Reason", desc: "The ultimate realization of enlightenment and leadership." }
+                  ].map((d, i) => (
+                    <div key={i} className="group p-8 bg-gradient-to-r from-[#0D2137] to-[#0A1929] border border-[#d4af37]/20 rounded-xl hover:border-[#d4af37]/60 transition-all duration-700 hover:shadow-[0_0_30px_rgba(212,175,55,0.1)]">
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div className="flex items-center gap-6">
+                          <div className="w-12 h-12 rounded-full border border-[#d4af37]/30 flex items-center justify-center text-[#d4af37] font-serif text-lg group-hover:bg-[#d4af37] group-hover:text-[#0A1929] transition-all duration-500">
+                            {d.degree.split(' ')[1]}
+                          </div>
+                          <div>
+                            <span className="text-[#d4af37] text-[10px] font-bold tracking-[0.2em] uppercase">{d.degree}</span>
+                            <h4 className="text-2xl font-bold text-[#FFFFFF] font-serif group-hover:text-[#d4af37] transition-colors">{d.title}</h4>
+                            <p className="text-[#d4af37]/60 text-xs italic">{d.subtitle}</p>
+                          </div>
+                        </div>
+                        <p className="text-[#B0B0B0] text-sm max-w-xs md:text-right font-light leading-relaxed">{d.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          {/* Administrative & Specialized Councils */}
+          <div className="mt-40">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-serif">Administrative & Specialized Councils</h3>
+                <p className="text-[#B0B0B0] text-base max-w-2xl mx-auto">
+                  Overseeing the integrity, security, and forward momentum of the Order through specialized executive bodies.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {[
+                  { title: "The Insinuators", subtitle: "Recruitment & Integration", desc: "The Division of Recruitment, Vetting, and Integration. Ensuring only the most worthy enter our halls." },
+                  { title: "The Areopagites", subtitle: "Supreme Governing Council", desc: "The Supreme Governing Council of the Order. Maintaining the laws and traditions of the brotherhood." },
+                  { title: "The Silent Philanthropists", subtitle: "Global Stewardship", desc: "The Executive Committee for External Impact. Directing our resources toward strategic benevolence." }
+                ].map((c, i) => (
+                  <div key={i} className="p-8 bg-[#0D2137] border border-[#d4af37]/10 rounded-2xl hover:border-[#d4af37]/40 transition-all duration-500 group text-center">
+                    <div className="w-16 h-16 mx-auto rounded-full bg-[#d4af37]/5 flex items-center justify-center mb-6 border border-[#d4af37]/20 group-hover:bg-[#d4af37] transition-all duration-500">
+                      <Shield className="w-8 h-8 text-[#d4af37] group-hover:text-[#0A1929]" />
+                    </div>
+                    <h4 className="text-xl font-bold text-[#FFFFFF] mb-2 font-serif group-hover:text-[#d4af37] transition-colors">{c.title}</h4>
+                    <p className="text-[#d4af37] text-[10px] font-bold uppercase tracking-widest mb-4">{c.subtitle}</p>
+                    <p className="text-[#B0B0B0] text-sm font-light leading-relaxed">{c.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
