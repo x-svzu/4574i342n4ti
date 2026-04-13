@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "./ContactForm";
 import Link from "@/components/NextLink";
+import ScrollReveal from "@/components/ScrollReveal";
 import { ChevronLeft, MapPin, Phone, Mail } from "lucide-react";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 
@@ -18,31 +19,36 @@ export default function ContactPage() {
         <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-[#0D2137] to-[#0A1929]">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
           
-          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-6">
-              <ChevronLeft className="w-4 h-4" />
-              Back to Home
-            </Link>
-            
-            <div className="flex justify-center mb-6">
-              <IlluminatiLogo size={64} />
-            </div>
-            
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Resources</p>
-            
-            <h1 className="text-4xl md:text-5xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
-              Contact Us
-            </h1>
-            
-            <div className="flex items-center gap-3 justify-center mb-6">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
-              <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
-            </div>
-            
-            <p className="text-lg text-[#E0E0E0] max-w-2xl mx-auto">
-              Have questions or seeking guidance? Our doors are open to those who seek enlightenment.
-            </p>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <ScrollReveal direction="down">
+              <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-10 font-medium">
+                <ChevronLeft className="w-4 h-4" />
+                Back to Home
+              </Link>
+              
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <IlluminatiLogo size={80} />
+                  <div className="absolute inset-0 bg-[#d4af37]/20 blur-2xl rounded-full -z-10 scale-150" />
+                </div>
+              </div>
+              
+              <p className="text-[#d4af37] text-xs tracking-[0.4em] mb-6 uppercase font-bold">Resources</p>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFFFFF] mb-8 font-serif tracking-tight">
+                Contact Us
+              </h1>
+              
+              <div className="flex items-center gap-4 justify-center mb-10">
+                <div className="w-24 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
+                <div className="w-3 h-3 bg-[#d4af37] rotate-45 shadow-[0_0_10px_#d4af37]" />
+                <div className="w-24 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
+              </div>
+              
+              <p className="text-xl text-[#E0E0E0] max-w-3xl mx-auto font-light leading-relaxed">
+                Have questions or seeking guidance? Our doors are open to those who seek enlightenment.
+              </p>
+            </ScrollReveal>
           </div>
         </section>
 

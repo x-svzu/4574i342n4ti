@@ -5,6 +5,7 @@ import Link from "@/components/NextLink";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
+import ScrollReveal from "@/components/ScrollReveal";
 import { 
   Eye, Star, Shield, Users, BookOpen, Globe, Heart,
   Check, Award, Lock, Zap, Briefcase, Send, ChevronDown
@@ -149,45 +150,50 @@ export default function MembershipPage() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-b from-[#0D2137] via-[#0A1929] to-[#0A1929]">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
         
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center py-20">
-          <div className="flex justify-center mb-6">
-            <IlluminatiLogo size={96} />
-          </div>
-          
-          <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">
-            Begin Your Journey to Enlightenment
-          </p>
-          
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-[#FFFFFF] font-cinzel">
-            Join the Brotherhood
-          </h1>
-          
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
-            <IlluminatiLogo size={20} />
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
-          </div>
-          
-          <p className="text-[#E0E0E0] text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            For over two centuries, our brotherhood has guided seekers toward enlightenment. 
-            Membership is a commitment to the pursuit of wisdom and the betterment of humanity.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button 
-              onClick={() => document.getElementById("application")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] font-semibold px-8 py-4 rounded transition-all duration-300 cursor-pointer"
-            >
-              <IlluminatiLogo size={20} />
-              Begin Your Application
-            </button>
-            <button 
-              onClick={() => document.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-2 border border-[#d4af37]/40 text-[#d4af37] hover:bg-[#d4af37]/10 font-semibold px-8 py-4 rounded transition-all duration-300 cursor-pointer"
-            >
-              Explore Benefits
-            </button>
-          </div>
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center py-20">
+          <ScrollReveal direction="down">
+            <div className="flex justify-center mb-8">
+              <div className="relative">
+                <IlluminatiLogo size={120} />
+                <div className="absolute inset-0 bg-[#d4af37]/20 blur-3xl rounded-full -z-10 scale-150" />
+              </div>
+            </div>
+            
+            <p className="text-[#d4af37] text-xs tracking-[0.4em] mb-6 uppercase font-bold">
+              Begin Your Journey to Enlightenment
+            </p>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-8 leading-tight text-[#FFFFFF] font-serif tracking-tighter">
+              Join the Brotherhood
+            </h1>
+            
+            <div className="flex items-center justify-center gap-6 mb-10">
+              <div className="w-24 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
+              <div className="w-3 h-3 bg-[#d4af37] rotate-45 shadow-[0_0_15px_#d4af37]" />
+              <div className="w-24 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
+            </div>
+            
+            <p className="text-[#E0E0E0] text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+              For over two centuries, our brotherhood has guided seekers toward enlightenment. 
+              Membership is a commitment to the pursuit of wisdom and the betterment of humanity.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <button 
+                onClick={() => document.getElementById("application")?.scrollIntoView({ behavior: "smooth" })}
+                className="group inline-flex items-center gap-3 bg-gradient-to-r from-[#d4af37] to-[#c9a431] text-[#0A1929] font-bold px-10 py-5 rounded-lg hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] transition-all duration-500 cursor-pointer text-lg"
+              >
+                <IlluminatiLogo size={24} />
+                Begin Your Application
+              </button>
+              <button 
+                onClick={() => document.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" })}
+                className="inline-flex items-center gap-3 border-2 border-[#d4af37]/40 text-[#d4af37] hover:bg-[#d4af37]/10 font-bold px-10 py-5 rounded-lg transition-all duration-300 cursor-pointer text-lg"
+              >
+                Explore Benefits
+              </button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -204,15 +210,17 @@ export default function MembershipPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="group p-6 bg-[#0A1929] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-all">
-                <div className="w-11 h-11 rounded-lg bg-[#d4af37]/10 flex items-center justify-center mb-4 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-[#0A1929] transition-all">
-                  <benefit.icon className="w-5 h-5" />
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="group h-full p-8 bg-[#0A1929] border border-[#d4af37]/10 rounded-xl hover:border-[#d4af37]/40 transition-all duration-500 hover:bg-[#0D1B2A] hover:-translate-y-2 shadow-xl">
+                  <div className="w-14 h-14 rounded-xl bg-[#d4af37]/10 flex items-center justify-center mb-6 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-[#0A1929] transition-all duration-500 shadow-lg">
+                    <benefit.icon className="w-7 h-7" />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#FFFFFF] mb-3 group-hover:text-[#d4af37] transition-colors font-serif">{benefit.title}</h3>
+                  <p className="text-[#B0B0B0] text-base leading-relaxed font-light">{benefit.description}</p>
                 </div>
-                <h3 className="text-base font-semibold text-[#FFFFFF] mb-2 group-hover:text-[#d4af37] transition-colors">{benefit.title}</h3>
-                <p className="text-[#B0B0B0] text-sm leading-relaxed">{benefit.description}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -287,22 +295,24 @@ export default function MembershipPage() {
             <p className="text-[#B0B0B0] text-base max-w-2xl mx-auto">Progress through the degrees as you deepen your understanding.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {membershipTiers.map((tier, index) => (
-              <div key={index} className={`relative p-6 bg-[#0D2137] border rounded-lg ${index === 2 ? 'border-[#d4af37]/40' : 'border-[#d4af37]/10'}`}>
-                {index === 2 && <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-[#d4af37] text-[#0A1929] text-xs font-bold rounded">HIGHEST</div>}
-                <h3 className="text-lg font-bold text-[#FFFFFF] mb-1 font-cinzel">{tier.level}</h3>
-                <p className="text-[#d4af37] text-xs mb-3">{tier.subtitle}</p>
-                <p className="text-[#B0B0B0] text-sm mb-4">{tier.description}</p>
-                <div className="space-y-2">
-                  {tier.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <Check className="w-3 h-3 text-[#d4af37] flex-shrink-0" />
-                      <span className="text-xs text-[#E0E0E0]">{benefit}</span>
-                    </div>
-                  ))}
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className={`relative h-full p-8 bg-[#0D2137] border rounded-2xl transition-all duration-500 hover:bg-[#0D1B2A] hover:-translate-y-2 shadow-2xl ${index === 2 ? 'border-[#d4af37]/60' : 'border-[#d4af37]/10'}`}>
+                  {index === 2 && <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#d4af37] text-[#0A1929] text-xs font-bold rounded-full shadow-[0_0_20px_rgba(212,175,55,0.4)]">HIGHEST DEGREE</div>}
+                  <h3 className="text-2xl font-bold text-[#FFFFFF] mb-1 font-serif">{tier.level}</h3>
+                  <p className="text-[#d4af37] text-xs mb-4 font-semibold uppercase tracking-widest">{tier.subtitle}</p>
+                  <p className="text-[#B0B0B0] text-base mb-6 font-light leading-relaxed">{tier.description}</p>
+                  <div className="space-y-3">
+                    {tier.benefits.map((benefit, idx) => (
+                      <div key={idx} className="flex items-center gap-3">
+                        <Check className="w-4 h-4 text-[#d4af37] flex-shrink-0" />
+                        <span className="text-sm text-[#E0E0E0] font-light">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

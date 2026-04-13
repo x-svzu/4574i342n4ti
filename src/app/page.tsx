@@ -6,6 +6,8 @@ import { ChevronDown, BookOpen, Users, Lightbulb, Eye, Globe, Shield, Award, Hea
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
+import ScrollReveal from "@/components/ScrollReveal";
+import { motion } from "motion/react";
 
 const tenets = [
   {
@@ -104,8 +106,8 @@ export default function HomePage() {
               Enlightenment Through Knowledge
             </p>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-[#FFFFFF]">
-              Welcome to the Illuminati Lodge of New York
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight text-[#FFFFFF] font-serif tracking-tight">
+              Welcome to the <span className="text-[#d4af37]">Illuminati Lodge</span> of New York
             </h1>
 
             {/* Decorative Line */}
@@ -152,23 +154,25 @@ export default function HomePage() {
       </section>
 
       {/* Purpose Statement - Clean section */}
-      <section className="relative py-20 md:py-28 overflow-hidden bg-[#0D2137]">
+      <section className="relative py-24 md:py-32 overflow-hidden bg-[#0D2137]">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/20 to-transparent" />
         
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Our Purpose</p>
-          <h2 className="font-bold mb-6 text-[#FFFFFF] text-2xl md:text-3xl lg:text-4xl">
-            Guardians of the Eternal Light
-          </h2>
-          <div className="flex items-center gap-3 mb-8 justify-center">
-            <div className="w-12 h-px bg-[#d4af37]/40" />
-            <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
-            <div className="w-12 h-px bg-[#d4af37]/40" />
-          </div>
-          <p className="text-[#E0E0E0] text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            We are the keepers of sacred knowledge, passed down through generations of enlightened minds. 
-            Our mission transcends time itself — to illuminate the path for those who seek truth, wisdom, and prosperity.
-          </p>
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <ScrollReveal>
+            <p className="text-[#d4af37] text-xs tracking-[0.3em] mb-6 uppercase font-semibold">Our Purpose</p>
+            <h2 className="font-bold mb-8 text-[#FFFFFF] text-3xl md:text-4xl lg:text-5xl font-serif">
+              Guardians of the Eternal Light
+            </h2>
+            <div className="flex items-center gap-4 mb-10 justify-center">
+              <div className="w-16 h-px bg-[#d4af37]/30" />
+              <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
+              <div className="w-16 h-px bg-[#d4af37]/30" />
+            </div>
+            <p className="text-[#E0E0E0] text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed font-light">
+              We are the keepers of sacred knowledge, passed down through generations of enlightened minds. 
+              Our mission transcends time itself — to illuminate the path for those who seek truth, wisdom, and prosperity.
+            </p>
+          </ScrollReveal>
         </div>
         
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/10 to-transparent" />
@@ -200,15 +204,17 @@ export default function HomePage() {
                 "bg-[#c0c0c0]/10 text-[#E0E0E0] group-hover:bg-[#c0c0c0] group-hover:text-[#0A1929]";
 
               return (
-                <div key={index} className="group p-6 md:p-8 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg transition-all duration-300 hover:border-[#d4af37]/30 hover:bg-[#0D1B2A]">
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-5 transition-all duration-300 ${colorClass}`}>
-                    <Icon className="w-6 h-6" />
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <div className="group h-full p-8 md:p-10 bg-[#0D2137] border border-[#d4af37]/10 rounded-xl transition-all duration-500 hover:border-[#d4af37]/40 hover:bg-[#0D1B2A] hover:-translate-y-2">
+                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-all duration-500 shadow-lg ${colorClass}`}>
+                      <Icon className="w-7 h-7" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#FFFFFF] mb-4 group-hover:text-[#d4af37] transition-colors duration-300 font-serif">
+                      {tenet.title}
+                    </h3>
+                    <p className="text-[#B0B0B0] text-base leading-relaxed">{tenet.description}</p>
                   </div>
-                  <h3 className="text-lg font-semibold text-[#FFFFFF] mb-3 group-hover:text-[#d4af37] transition-colors duration-300">
-                    {tenet.title}
-                  </h3>
-                  <p className="text-[#B0B0B0] text-base leading-relaxed">{tenet.description}</p>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -227,46 +233,48 @@ export default function HomePage() {
       </section>
 
       {/* About Section - Clean, no image */}
-      <section id="about" className="relative py-16 md:py-20 overflow-hidden bg-[#112240]">
+      <section id="about" className="relative py-24 md:py-32 overflow-hidden bg-[#112240]">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/20 to-transparent" />
 
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center">
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Our Brotherhood</p>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight text-[#FFFFFF]">
-              Guardians of Ancient Wisdom
-            </h2>
-            <div className="flex items-center gap-3 mb-8 justify-center">
-              <div className="w-10 h-px bg-[#d4af37]/40" />
-              <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
-              <div className="w-10 h-px bg-[#d4af37]/40" />
+        <div className="max-w-5xl mx-auto px-6">
+          <ScrollReveal>
+            <div className="text-center">
+              <p className="text-[#d4af37] text-xs tracking-[0.3em] mb-6 uppercase font-semibold">Our Brotherhood</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight text-[#FFFFFF] font-serif">
+                Guardians of Ancient Wisdom
+              </h2>
+              <div className="flex items-center gap-4 mb-10 justify-center">
+                <div className="w-12 h-px bg-[#d4af37]/30" />
+                <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
+                <div className="w-12 h-px bg-[#d4af37]/30" />
+              </div>
+              <div className="space-y-8 text-[#E0E0E0] text-xl leading-relaxed text-left max-w-4xl mx-auto font-light">
+                <p>
+                  Our coalition brings together influencers from diverse political, religious, and geographical backgrounds, all united under the banner of enlightenment. The Illuminati Lodge of New York is committed to safeguarding individual freedom by fostering the discovery, expression, and celebration of one&apos;s true self.
+                </p>
+                <p>
+                  We guide our members in appreciating and attaining their highest potential progressively, realistically, and sustainably. Regardless of gender or background, all are invited to join us in this journey of personal and societal transformation.
+                </p>
+                <p>
+                  From our origins in 1776 Bavaria to our modern presence spanning 120+ nations, we have remained steadfast in our mission to illuminate the path for those who seek wisdom.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-6 mt-12 justify-center relative z-20">
+                <Link href="/who-we-are">
+                  <button className="inline-flex items-center justify-center gap-3 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] font-bold px-8 py-5 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer pointer-events-auto">
+                    <Crown className="w-5 h-5" />
+                    Discover Our Legacy
+                  </button>
+                </Link>
+                <Link href="/our-mission">
+                  <button className="inline-flex items-center justify-center gap-3 border border-[#d4af37]/40 text-[#d4af37] hover:bg-[#d4af37]/10 font-bold px-8 py-5 rounded-lg transition-all duration-300 hover:border-[#d4af37] cursor-pointer pointer-events-auto">
+                    <Sparkles className="w-5 h-5" />
+                    Our Sacred Mission
+                  </button>
+                </Link>
+              </div>
             </div>
-            <div className="space-y-6 text-[#E0E0E0] text-lg leading-relaxed text-left max-w-3xl mx-auto">
-              <p>
-                Our coalition brings together influencers from diverse political, religious, and geographical backgrounds, all united under the banner of enlightenment. The Illuminati Lodge of New York is committed to safeguarding individual freedom by fostering the discovery, expression, and celebration of one&apos;s true self.
-              </p>
-              <p>
-                We guide our members in appreciating and attaining their highest potential progressively, realistically, and sustainably. Regardless of gender or background, all are invited to join us in this journey of personal and societal transformation.
-              </p>
-              <p>
-                From our origins in 1776 Bavaria to our modern presence spanning 120+ nations, we have remained steadfast in our mission to illuminate the path for those who seek wisdom.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center relative z-20">
-              <Link href="/who-we-are">
-                <button className="inline-flex items-center justify-center gap-2 bg-[#d4af37] hover:bg-[#c9a431] text-[#0A1929] font-semibold px-6 py-4 rounded transition-all duration-300 cursor-pointer pointer-events-auto">
-                  <Crown className="w-4 h-4" />
-                  Discover Our Legacy
-                </button>
-              </Link>
-              <Link href="/our-mission">
-                <button className="inline-flex items-center justify-center gap-2 border border-[#d4af37]/40 text-[#d4af37] hover:bg-[#d4af37]/10 font-semibold px-6 py-4 rounded transition-all duration-300 cursor-pointer pointer-events-auto">
-                  <Sparkles className="w-4 h-4" />
-                  Our Sacred Mission
-                </button>
-              </Link>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/10 to-transparent" />
@@ -290,21 +298,21 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <div
-                  key={index}
-                  className="p-6 md:p-8 text-center bg-[#0D2137] border border-[#d4af37]/10 rounded-lg group hover:border-[#d4af37]/30 transition-all duration-300"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="w-10 h-10 mx-auto rounded-lg bg-[#d4af37]/10 flex items-center justify-center mb-4 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-[#0A1929] transition-all duration-300">
-                    <Icon className="w-5 h-5" />
+                <ScrollReveal key={index} delay={index * 0.1} direction={index % 2 === 0 ? 'left' : 'right'}>
+                  <div
+                    className="p-10 text-center bg-[#0D2137] border border-[#d4af37]/10 rounded-xl group hover:border-[#d4af37]/40 transition-all duration-500 hover:bg-[#0D1B2A] hover:-translate-y-2 shadow-xl"
+                  >
+                    <div className="w-12 h-12 mx-auto rounded-xl bg-[#d4af37]/10 flex items-center justify-center mb-6 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-[#0A1929] transition-all duration-500 shadow-inner">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <div className="text-4xl md:text-5xl font-bold text-[#d4af37] mb-3 font-serif tracking-tighter">{stat.value}</div>
+                    <p className="text-[#B0B0B0] text-sm font-bold uppercase tracking-widest">{stat.label}</p>
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-[#d4af37] mb-2">{stat.value}</div>
-                  <p className="text-[#B0B0B0] text-sm font-medium">{stat.label}</p>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -331,30 +339,32 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="relative mt-12">
+          <div className="relative mt-16">
             {/* Timeline Line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#d4af37] via-[#d4af37]/50 to-transparent hidden lg:block" />
 
-            <div className="space-y-12 lg:space-y-16">
+            <div className="space-y-16 lg:space-y-24">
               {timeline.map((item, index) => (
-                <div key={index} className={`relative flex flex-col lg:flex-row items-center gap-6 lg:gap-0 ${index % 2 === 0 ? "" : "lg:flex-row-reverse"}`}>
-                  <div className={`lg:w-1/2 ${index % 2 === 0 ? "lg:pr-12 lg:text-right" : "lg:pl-12"}`}>
-                    <div className="relative group">
-                      <div className="relative bg-[#0A1929] border border-[#d4af37]/20 rounded-lg p-6 group-hover:border-[#d4af37]/40 transition-colors duration-300">
-                        <span className="inline-block px-3 py-1 bg-[#d4af37]/10 text-[#d4af37] text-sm font-bold rounded-full mb-3 tracking-wider">{item.year}</span>
-                        <h3 className="text-lg font-bold text-[#FFFFFF] mb-2 font-cinzel">{item.title}</h3>
-                        <p className="text-[#B0B0B0] text-sm leading-relaxed">{item.description}</p>
+                <ScrollReveal key={index} direction={index % 2 === 0 ? 'right' : 'left'} delay={index * 0.1}>
+                  <div className={`relative flex flex-col lg:flex-row items-center gap-8 lg:gap-0 ${index % 2 === 0 ? "" : "lg:flex-row-reverse"}`}>
+                    <div className={`lg:w-1/2 ${index % 2 === 0 ? "lg:pr-16 lg:text-right" : "lg:pl-16"}`}>
+                      <div className="relative group">
+                        <div className="relative bg-[#0A1929] border border-[#d4af37]/20 rounded-xl p-8 group-hover:border-[#d4af37]/50 transition-all duration-500 hover:bg-[#0D1B2A] shadow-2xl">
+                          <span className="inline-block px-4 py-1.5 bg-[#d4af37]/10 text-[#d4af37] text-xs font-bold rounded-full mb-4 tracking-[0.2em] uppercase">{item.year}</span>
+                          <h3 className="text-2xl font-bold text-[#FFFFFF] mb-4 font-serif">{item.title}</h3>
+                          <p className="text-[#B0B0B0] text-base leading-relaxed font-light">{item.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Timeline Dot */}
-                  <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center justify-center">
-                    <div className="w-3 h-3 rounded-full bg-[#d4af37] shadow-[0_0_15px_rgba(212,175,55,0.5)]" />
-                  </div>
+                    {/* Timeline Dot */}
+                    <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center justify-center">
+                      <div className="w-4 h-4 rounded-full bg-[#d4af37] shadow-[0_0_20px_rgba(212,175,55,0.6)] border-4 border-[#0D2137]" />
+                    </div>
 
-                  <div className="lg:w-1/2" />
-                </div>
+                    <div className="lg:w-1/2" />
+                  </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -390,17 +400,19 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {philanthropyItems.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div key={index} className="group p-8 bg-[#0D2137] border border-[#d4af37]/10 rounded-lg transition-all duration-300 hover:border-[#d4af37]/30 hover:bg-[#0D1B2A] text-center">
-                  <div className="w-14 h-14 mx-auto rounded-lg bg-[#d4af37]/10 flex items-center justify-center mb-5 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-[#0A1929] transition-all duration-300">
-                    <Icon className="w-7 h-7" />
+                <ScrollReveal key={index} delay={index * 0.15}>
+                  <div className="group h-full p-10 bg-[#0D2137] border border-[#d4af37]/10 rounded-xl transition-all duration-500 hover:border-[#d4af37]/40 hover:bg-[#0D1B2A] hover:-translate-y-2 text-center shadow-xl">
+                    <div className="w-16 h-16 mx-auto rounded-xl bg-[#d4af37]/10 flex items-center justify-center mb-6 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-[#0A1929] transition-all duration-500 shadow-lg">
+                      <Icon className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#FFFFFF] mb-4 group-hover:text-[#d4af37] transition-colors duration-300 font-serif">{item.title}</h3>
+                    <p className="text-[#B0B0B0] text-base leading-relaxed font-light">{item.description}</p>
                   </div>
-                  <h3 className="text-lg font-semibold text-[#FFFFFF] mb-3 group-hover:text-[#d4af37] transition-colors duration-300">{item.title}</h3>
-                  <p className="text-[#B0B0B0] text-base leading-relaxed">{item.description}</p>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>

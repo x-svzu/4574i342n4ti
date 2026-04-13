@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
+import ScrollReveal from "@/components/ScrollReveal";
 import { 
   ArrowRight, 
   Calendar, 
@@ -90,50 +91,56 @@ export default function OurHistoryPage() {
           </div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
           
-          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-6">
-              <ChevronLeft className="w-4 h-4" />
-              Back to Home
-            </Link>
-            
-            <div className="flex justify-center mb-6">
-              <IlluminatiLogo size={64} />
-            </div>
-            
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">A Legacy Spanning Centuries</p>
-            
-            <h1 className="text-4xl md:text-5xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
-              Our History
-            </h1>
-            
-            <div className="flex items-center gap-3 justify-center mb-6">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
-              <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
-            </div>
-            
-            <p className="text-lg text-[#E0E0E0] max-w-2xl mx-auto leading-relaxed">
-              Trace the evolution of our distinguished brotherhood through two and a half centuries 
-              of perseverance, adaptation, and unwavering commitment to enlightenment.
-            </p>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <ScrollReveal direction="down">
+              <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#f0d77a] transition-colors mb-10 font-medium">
+                <ChevronLeft className="w-4 h-4" />
+                Back to Home
+              </Link>
+              
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <IlluminatiLogo size={100} />
+                  <div className="absolute inset-0 bg-[#d4af37]/20 blur-3xl rounded-full -z-10 scale-150" />
+                </div>
+              </div>
+              
+              <p className="text-[#d4af37] text-xs tracking-[0.4em] mb-6 uppercase font-bold">A Legacy Spanning Centuries</p>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFFFFF] mb-8 font-serif tracking-tight">
+                Our History
+              </h1>
+              
+              <div className="flex items-center gap-4 justify-center mb-10">
+                <div className="w-24 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
+                <div className="w-3 h-3 bg-[#d4af37] rotate-45 shadow-[0_0_10px_#d4af37]" />
+                <div className="w-24 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
+              </div>
+              
+              <p className="text-xl text-[#E0E0E0] max-w-3xl mx-auto font-light leading-relaxed">
+                Trace the evolution of our distinguished brotherhood through two and a half centuries 
+                of perseverance, adaptation, and unwavering commitment to enlightenment.
+              </p>
+            </ScrollReveal>
           </div>
         </section>
 
         {/* Stats Section */}
         <section className="relative py-12 bg-[#0D2137]">
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div 
-                  key={index} 
-                  className="p-5 bg-[#0A1929] border border-[#d4af37]/10 rounded-lg text-center hover:border-[#d4af37]/30 transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-3">
-                    <stat.icon className="w-5 h-5 text-[#d4af37]" />
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <div 
+                    className="p-8 bg-[#0A1929] border border-[#d4af37]/10 rounded-2xl text-center hover:border-[#d4af37]/40 transition-all duration-500 card-shine hover:-translate-y-2 shadow-xl"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#d4af37]/20 transition-colors">
+                      <stat.icon className="w-7 h-7 text-[#d4af37]" />
+                    </div>
+                    <div className="text-3xl md:text-4xl font-bold text-[#d4af37] mb-2 font-serif">{stat.value}</div>
+                    <div className="text-xs text-[#B0B0B0] uppercase tracking-widest font-semibold">{stat.label}</div>
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">{stat.value}</div>
-                  <div className="text-xs text-[#B0B0B0]">{stat.label}</div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -167,33 +174,34 @@ export default function OurHistoryPage() {
               {/* Timeline Line */}
               <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#d4af37] via-[#d4af37]/30 to-transparent" />
               
-              <div className="space-y-8">
+              <div className="space-y-12">
                 {timeline.map((item, index) => (
-                  <div 
-                    key={index} 
-                    className={`relative pl-12 md:pl-0 ${index % 2 === 0 ? 'md:pr-[52%]' : 'md:pl-[52%]'}`}
-                  >
-                    {/* Timeline Dot */}
-                    <div className="absolute left-2 md:left-1/2 top-2 md:-translate-x-1/2 z-10">
-                      <div className="w-4 h-4 rounded-full bg-[#d4af37] border-2 border-[#0D2137]" />
-                    </div>
-                    
-                    {/* Content Card */}
-                    <div className="p-5 bg-[#0A1929] border border-[#d4af37]/10 rounded-lg hover:border-[#d4af37]/30 transition-colors">
-                      <div className="flex items-center gap-3 mb-3 flex-wrap">
-                        <span className="px-3 py-1 bg-[#d4af37]/10 text-[#d4af37] text-xs font-bold rounded-full">
-                          {item.date}
-                        </span>
-                        <span className="flex items-center gap-1 text-xs text-[#B0B0B0]">
-                          <MapPin className="w-3 h-3" />
-                          {item.location}
-                        </span>
+                  <ScrollReveal key={index} direction={index % 2 === 0 ? 'right' : 'left'} delay={index * 0.1}>
+                    <div 
+                      className={`relative pl-12 md:pl-0 ${index % 2 === 0 ? 'md:pr-[52%]' : 'md:pl-[52%]'}`}
+                    >
+                      {/* Timeline Dot */}
+                      <div className="absolute left-2 md:left-1/2 top-2 md:-translate-x-1/2 z-10">
+                        <div className="w-5 h-5 rounded-full bg-[#d4af37] border-4 border-[#0D2137] shadow-[0_0_15px_rgba(212,175,55,0.5)]" />
                       </div>
                       
-                      <h3 className="text-lg font-semibold text-[#FFFFFF] mb-2 font-cinzel">{item.title}</h3>
-                      <p className="text-[#B0B0B0] text-sm leading-relaxed">{item.description}</p>
+                      {/* Content Card */}
+                      <div className="p-8 bg-[#0A1929] border border-[#d4af37]/10 rounded-2xl hover:border-[#d4af37]/40 transition-all duration-500 shadow-2xl hover:bg-[#0D1B2A]">
+                        <div className="flex items-center gap-4 mb-4 flex-wrap">
+                          <span className="px-4 py-1.5 bg-[#d4af37]/10 text-[#d4af37] text-xs font-bold rounded-full tracking-widest uppercase">
+                            {item.date}
+                          </span>
+                          <span className="flex items-center gap-2 text-xs text-[#B0B0B0] font-medium">
+                            <MapPin className="w-4 h-4 text-[#d4af37]" />
+                            {item.location}
+                          </span>
+                        </div>
+                        
+                        <h3 className="text-2xl font-bold text-[#FFFFFF] mb-3 font-serif">{item.title}</h3>
+                        <p className="text-[#B0B0B0] text-base leading-relaxed font-light">{item.description}</p>
+                      </div>
                     </div>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </div>

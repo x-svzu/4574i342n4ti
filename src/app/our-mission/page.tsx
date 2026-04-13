@@ -4,6 +4,7 @@ import Link from "@/components/NextLink";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 import { 
   Sun, 
   Shield, 
@@ -105,30 +106,32 @@ export default function OurMissionPage() {
           </div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
           
-          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">About Us</p>
-            
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
-              Our Sacred Mission
-            </h1>
-            
-            <div className="flex items-center gap-3 justify-center mb-8">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
-              <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
-            </div>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <ScrollReveal direction="down">
+              <p className="text-[#d4af37] text-xs tracking-[0.3em] mb-6 uppercase font-semibold">About Us</p>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#FFFFFF] mb-8 font-serif tracking-tight">
+                Our Sacred Mission
+              </h1>
+              
+              <div className="flex items-center gap-4 justify-center mb-10">
+                <div className="w-20 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
+                <div className="w-2 h-2 bg-[#d4af37] rotate-45 shadow-[0_0_10px_#d4af37]" />
+                <div className="w-20 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
+              </div>
 
-            <div className="w-20 h-20 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-8 border border-[#d4af37]/30">
-              <Eye className="w-10 h-10 text-[#d4af37]" />
-            </div>
-            <blockquote className="text-xl md:text-2xl text-[#d4af37] font-cinzel italic mb-8 leading-relaxed">
-              &ldquo;To illuminate the path for those who seek wisdom, to guide humanity toward its 
-              highest potential, and to preserve the sacred knowledge that has been entrusted to us.&rdquo;
-            </blockquote>
-            <p className="text-[#E0E0E0] text-lg max-w-2xl mx-auto">
-              The Illuminati Lodge of New York exists to serve as a bridge between ancient wisdom and 
-              modern understanding, guiding seekers toward enlightenment for over two centuries.
-            </p>
+              <div className="w-24 h-24 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-10 border border-[#d4af37]/30 shadow-2xl">
+                <Eye className="w-12 h-12 text-[#d4af37]" />
+              </div>
+              <blockquote className="text-2xl md:text-3xl text-[#d4af37] font-serif italic mb-10 leading-relaxed max-w-4xl mx-auto">
+                &ldquo;To illuminate the path for those who seek wisdom, to guide humanity toward its 
+                highest potential, and to preserve the sacred knowledge that has been entrusted to us.&rdquo;
+              </blockquote>
+              <p className="text-[#E0E0E0] text-xl max-w-3xl mx-auto font-light leading-relaxed">
+                The Illuminati Lodge of New York exists to serve as a bridge between ancient wisdom and 
+                modern understanding, guiding seekers toward enlightenment for over two centuries.
+              </p>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -146,53 +149,54 @@ export default function OurMissionPage() {
                 and every decision we make as a brotherhood.
               </p>
               
-              <div className="space-y-8">
+              <div className="space-y-12">
                 {pillars.map((pillar, index) => (
-                  <div 
-                    key={index} 
-                    className="relative overflow-hidden rounded-lg border border-[#d4af37]/20"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#112240] via-[#0D2137] to-[#112240]" />
-                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/20 to-transparent" />
-                    
-                    <div className="relative p-8 md:p-10">
-                      <div className="flex flex-col md:flex-row gap-6 md:gap-10">
-                        {/* Icon and Roman Numeral */}
-                        <div className="flex flex-col items-center md:items-start gap-4 md:w-48 flex-shrink-0">
-                          <div className="relative">
-                            <div className="w-20 h-20 rounded-full bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/30">
-                              <pillar.icon className="w-10 h-10 text-[#d4af37]" />
+                  <ScrollReveal key={index} delay={index * 0.15}>
+                    <div 
+                      className="relative overflow-hidden rounded-2xl border border-[#d4af37]/20 group hover:border-[#d4af37]/50 transition-all duration-500 shadow-2xl"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-[#112240] via-[#0D2137] to-[#112240] group-hover:opacity-90 transition-opacity" />
+                      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
+                      
+                      <div className="relative p-10 md:p-12">
+                        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+                          {/* Icon and Roman Numeral */}
+                          <div className="flex flex-col items-center md:items-start gap-6 md:w-56 flex-shrink-0">
+                            <div className="relative">
+                              <div className="w-24 h-24 rounded-2xl bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/30 group-hover:scale-110 transition-transform duration-500">
+                                <pillar.icon className="w-12 h-12 text-[#d4af37]" />
+                              </div>
+                              <div className="absolute -bottom-3 -right-3 w-10 h-10 rounded-full bg-[#d4af37] flex items-center justify-center shadow-lg">
+                                <span className="text-[#0A1929] text-sm font-bold font-serif">{pillar.roman}</span>
+                              </div>
                             </div>
-                            <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-[#d4af37] flex items-center justify-center">
-                              <span className="text-[#0A1929] text-xs font-bold font-cinzel">{pillar.roman}</span>
-                            </div>
+                            <h3 className="text-3xl font-bold text-[#d4af37] font-serif text-center md:text-left tracking-tight">
+                              {pillar.title}
+                            </h3>
                           </div>
-                          <h3 className="text-2xl font-semibold text-[#d4af37] font-cinzel text-center md:text-left">
-                            {pillar.title}
-                          </h3>
-                        </div>
-                        
-                        {/* Content */}
-                        <div className="flex-1">
-                          <p className="text-[#E0E0E0] text-lg leading-relaxed mb-6">
-                            {pillar.description}
-                          </p>
                           
-                          {/* Initiatives */}
-                          <div className="flex flex-wrap gap-3">
-                            {pillar.initiatives.map((initiative, idx) => (
-                              <span 
-                                key={idx}
-                                className="px-4 py-2 bg-[#0A1929] border border-[#d4af37]/20 rounded-full text-sm text-[#d4af37]"
-                              >
-                                {initiative}
-                              </span>
-                            ))}
+                          {/* Content */}
+                          <div className="flex-1">
+                            <p className="text-[#E0E0E0] text-xl leading-relaxed mb-8 font-light">
+                              {pillar.description}
+                            </p>
+                            
+                            {/* Initiatives */}
+                            <div className="flex flex-wrap gap-4">
+                              {pillar.initiatives.map((initiative, idx) => (
+                                <span 
+                                  key={idx}
+                                  className="px-5 py-2.5 bg-[#0A1929]/80 border border-[#d4af37]/20 rounded-lg text-sm font-medium text-[#d4af37] hover:border-[#d4af37] transition-colors"
+                                >
+                                  {initiative}
+                                </span>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </section>
@@ -257,35 +261,39 @@ export default function OurMissionPage() {
               <div className="w-24 h-px bg-gradient-to-l from-transparent to-[#d4af37]/30" />
             </div>
 
-            {/* Impact Statistics */}
             <section className="mb-20">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 font-cinzel text-center">
-                Our Global Impact
-              </h2>
-              <p className="text-[#E0E0E0] text-lg text-center max-w-3xl mx-auto mb-12">
-                Through centuries of dedicated service, our brotherhood has touched countless lives and 
-                shaped the course of human history.
-              </p>
+              <ScrollReveal>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#FFFFFF] mb-6 font-serif text-center">
+                  Our Global Impact
+                </h2>
+                <p className="text-[#E0E0E0] text-xl text-center max-w-3xl mx-auto mb-16 font-light">
+                  Through centuries of dedicated service, our brotherhood has touched countless lives and 
+                  shaped the course of human history.
+                </p>
+              </ScrollReveal>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                 {impactStats.map((stat, index) => (
-                  <div 
-                    key={index} 
-                    className="p-6 bg-gradient-to-br from-[#0D2137] to-[#112240] border border-[#d4af37]/20 rounded-lg text-center hover:border-[#d4af37]/40 transition-colors"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-4">
-                      <stat.icon className="w-6 h-6 text-[#d4af37]" />
+                  <ScrollReveal key={index} delay={index * 0.1}>
+                    <div 
+                      className="p-10 bg-gradient-to-br from-[#0D2137] to-[#112240] border border-[#d4af37]/20 rounded-2xl text-center hover:border-[#d4af37]/50 transition-all duration-500 card-shine hover:-translate-y-2 shadow-xl"
+                    >
+                      <div className="w-16 h-16 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#d4af37]/20 transition-colors">
+                        <stat.icon className="w-8 h-8 text-[#d4af37]" />
+                      </div>
+                      <div className="text-4xl md:text-5xl font-bold text-[#d4af37] mb-3 font-serif">{stat.value}</div>
+                      <div className="text-xs text-[#E0E0E0] uppercase tracking-[0.2em] font-semibold">{stat.label}</div>
                     </div>
-                    <div className="text-3xl md:text-4xl font-bold text-[#d4af37] mb-2">{stat.value}</div>
-                    <div className="text-sm text-[#E0E0E0]">{stat.label}</div>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
               
-              <div className="relative h-64 rounded-lg overflow-hidden border border-[#d4af37]/20 bg-[#0D2137] flex items-center justify-center">
-                <Globe className="w-24 h-24 text-[#d4af37]/20" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
-              </div>
+              <ScrollReveal>
+                <div className="relative h-80 rounded-2xl overflow-hidden border border-[#d4af37]/20 bg-[#0D2137] flex items-center justify-center shadow-2xl">
+                  <Globe className="w-32 h-32 text-[#d4af37]/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
+                </div>
+              </ScrollReveal>
             </section>
 
             {/* Decorative Divider */}

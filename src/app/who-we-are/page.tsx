@@ -3,6 +3,7 @@
 import Link from "@/components/NextLink";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 import { Eye, ChevronLeft, ArrowRight, Users, BookOpen, Star, Shield, Globe, Heart, Sparkles, Crown, Building } from "lucide-react";
 
 export default function WhoWeArePage() {
@@ -98,50 +99,52 @@ export default function WhoWeArePage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-24">
-          <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37]/80 hover:text-[#d4af37] transition-colors mb-8 text-sm">
-            <ChevronLeft className="w-4 h-4" />
-            Return to Gateway
-          </Link>
-          
-          <div className="mb-8 flex justify-center">
-            <div className="relative">
-              <div className="w-24 h-24 flex items-center justify-center bg-[#d4af37]/10 rounded-full border border-[#d4af37]/30">
-                <Eye className="w-12 h-12 text-[#d4af37]" />
+          <ScrollReveal direction="down">
+            <Link href="/" className="inline-flex items-center gap-2 text-[#d4af37]/80 hover:text-[#d4af37] transition-colors mb-8 text-sm">
+              <ChevronLeft className="w-4 h-4" />
+              Return to Gateway
+            </Link>
+            
+            <div className="mb-8 flex justify-center">
+              <div className="relative">
+                <div className="w-24 h-24 flex items-center justify-center bg-[#d4af37]/10 rounded-full border border-[#d4af37]/30">
+                  <Eye className="w-12 h-12 text-[#d4af37]" />
+                </div>
+                <div className="absolute inset-0 bg-[#d4af37]/20 blur-2xl rounded-full -z-10 scale-150" />
               </div>
-              <div className="absolute inset-0 bg-[#d4af37]/20 blur-2xl rounded-full -z-10 scale-150" />
             </div>
-          </div>
-          
-          <p className="text-[#d4af37] text-xs tracking-[0.3em] uppercase font-medium mb-6">About Our Brotherhood</p>
-          
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFFFFF] mb-6 font-cinzel tracking-tight leading-tight">
-            Discover Our Legacy
-          </h1>
-          
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#d4af37]/60 to-transparent" />
-            <div className="w-2 h-2 bg-[#d4af37] rotate-45 shadow-[0_0_10px_#d4af37]" />
-            <div className="w-24 h-px bg-gradient-to-l from-transparent via-[#d4af37]/60 to-transparent" />
-          </div>
-          
-          <p className="text-xl md:text-2xl text-[#E0E0E0] max-w-3xl mx-auto mb-12 leading-relaxed">
-            For over two centuries, the Illuminati Lodge of New York has stood as a beacon of enlightenment, 
-            guiding seekers toward wisdom, prosperity, and the betterment of all humanity.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/membership">
-              <button className="group px-10 py-5 bg-gradient-to-r from-[#d4af37] to-[#c9a431] text-[#0A1929] font-bold text-lg rounded-lg hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] transition-all duration-500 flex items-center justify-center gap-2">
-                Join Our Brotherhood
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </Link>
-            <Link href="/our-history">
-              <button className="px-10 py-5 border-2 border-[#d4af37]/50 text-[#d4af37] font-semibold text-lg rounded-lg hover:bg-[#d4af37]/10 hover:border-[#d4af37] transition-all duration-300">
-                Explore Our History
-              </button>
-            </Link>
-          </div>
+            
+            <p className="text-[#d4af37] text-xs tracking-[0.3em] uppercase font-medium mb-6">About Our Brotherhood</p>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFFFFF] mb-6 font-serif tracking-tight leading-tight">
+              Discover Our Legacy
+            </h1>
+            
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#d4af37]/60 to-transparent" />
+              <div className="w-2 h-2 bg-[#d4af37] rotate-45 shadow-[0_0_10px_#d4af37]" />
+              <div className="w-24 h-px bg-gradient-to-l from-transparent via-[#d4af37]/60 to-transparent" />
+            </div>
+            
+            <p className="text-xl md:text-2xl text-[#E0E0E0] max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+              For over two centuries, the Illuminati Lodge of New York has stood as a beacon of enlightenment, 
+              guiding seekers toward wisdom, prosperity, and the betterment of all humanity.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/membership">
+                <button className="group px-10 py-5 bg-gradient-to-r from-[#d4af37] to-[#c9a431] text-[#0A1929] font-bold text-lg rounded-lg hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] transition-all duration-500 flex items-center justify-center gap-2 cursor-pointer">
+                  Join Our Brotherhood
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+              <Link href="/our-history">
+                <button className="px-10 py-5 border-2 border-[#d4af37]/50 text-[#d4af37] font-semibold text-lg rounded-lg hover:bg-[#d4af37]/10 hover:border-[#d4af37] transition-all duration-300 cursor-pointer">
+                  Explore Our History
+                </button>
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
         
         {/* Scroll indicator */}
@@ -195,18 +198,19 @@ export default function WhoWeArePage() {
             </div>
           </div>
 
-          {/* Founding Members */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {foundingMembers.map((member, i) => (
-              <div key={i} className="group relative p-8 bg-gradient-to-br from-[#0D2137] to-[#112240]/50 rounded-2xl border border-[#d4af37]/10 hover:border-[#d4af37]/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.1)] card-shine">
-                <div className="absolute top-6 right-6 text-4xl font-bold text-[#d4af37]/10 font-cinzel">{member.num}</div>
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#d4af37]/20 to-[#d4af37]/5 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-7 h-7 text-[#d4af37]" />
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className="group relative h-full p-8 bg-gradient-to-br from-[#0D2137] to-[#112240]/50 rounded-2xl border border-[#d4af37]/10 hover:border-[#d4af37]/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.1)] card-shine hover:-translate-y-2">
+                  <div className="absolute top-6 right-6 text-4xl font-bold text-[#d4af37]/10 font-serif">{member.num}</div>
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#d4af37]/20 to-[#d4af37]/5 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-7 h-7 text-[#d4af37]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#FFFFFF] mb-1 font-serif">{member.name}</h3>
+                  <p className="text-[#d4af37] text-sm font-medium mb-3 uppercase tracking-wider">{member.title}</p>
+                  <p className="text-[#B0B0B0] text-sm leading-relaxed font-light">{member.desc}</p>
                 </div>
-                <h3 className="text-xl font-bold text-[#FFFFFF] mb-1 font-cinzel">{member.name}</h3>
-                <p className="text-[#d4af37] text-sm font-medium mb-3">{member.title}</p>
-                <p className="text-[#B0B0B0] text-sm leading-relaxed">{member.desc}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -348,21 +352,27 @@ export default function WhoWeArePage() {
       <section className="relative py-24 md:py-32 bg-gradient-to-b from-[#112240] to-[#0A1929]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-[#d4af37] text-xs tracking-[0.3em] uppercase font-medium mb-4">Worldwide Presence</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#FFFFFF] font-cinzel mb-6">Global Network Structure</h2>
+            <ScrollReveal>
+              <p className="text-[#d4af37] text-xs tracking-[0.3em] uppercase font-medium mb-4">Worldwide Presence</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#FFFFFF] font-serif mb-6">Global Network Structure</h2>
+            </ScrollReveal>
           </div>
           
-          <div className="relative rounded-2xl overflow-hidden mb-12 border border-[#d4af37]/20 bg-[#0D2137] h-80 flex items-center justify-center">
-            <Globe className="w-32 h-32 text-[#d4af37]/20" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
-          </div>
+          <ScrollReveal>
+            <div className="relative rounded-2xl overflow-hidden mb-12 border border-[#d4af37]/20 bg-[#0D2137] h-80 flex items-center justify-center">
+              <Globe className="w-32 h-32 text-[#d4af37]/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-transparent to-transparent" />
+            </div>
+          </ScrollReveal>
           
           <div className="grid md:grid-cols-4 gap-6 mb-16">
             {globalStats.map((stat, i) => (
-              <div key={i} className="text-center p-8 bg-gradient-to-br from-[#0D2137] to-[#112240]/30 rounded-2xl border border-[#d4af37]/10 hover:border-[#d4af37]/30 transition-all card-shine">
-                <div className="text-5xl font-bold text-[#d4af37] mb-2 font-cinzel">{stat.value}</div>
-                <div className="text-[#B0B0B0] font-medium">{stat.label}</div>
-              </div>
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className="text-center p-8 bg-gradient-to-br from-[#0D2137] to-[#112240]/30 rounded-2xl border border-[#d4af37]/10 hover:border-[#d4af37]/30 transition-all card-shine hover:-translate-y-1">
+                  <div className="text-5xl font-bold text-[#d4af37] mb-2 font-serif">{stat.value}</div>
+                  <div className="text-[#B0B0B0] font-medium uppercase tracking-widest text-xs">{stat.label}</div>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
           

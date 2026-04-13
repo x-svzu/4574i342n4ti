@@ -4,6 +4,7 @@ import Link from "@/components/NextLink";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 import { 
   Eye, 
   BookOpen, 
@@ -118,26 +119,28 @@ export default function TenetsPage() {
           </div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/30 to-transparent" />
           
-          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <p className="text-[#d4af37] text-xs tracking-[0.2em] mb-4 uppercase font-medium">Our Sacred Foundation</p>
-            
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#FFFFFF] mb-6 font-cinzel">
-              The Foundation of Our Order
-            </h1>
-            
-            <div className="flex items-center gap-3 justify-center mb-8">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
-              <div className="w-2 h-2 bg-[#d4af37] rotate-45" />
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
-            </div>
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <ScrollReveal direction="down">
+              <p className="text-[#d4af37] text-xs tracking-[0.4em] mb-6 uppercase font-bold">Our Sacred Foundation</p>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFFFFF] mb-8 font-serif tracking-tight">
+                The Foundation of Our Order
+              </h1>
+              
+              <div className="flex items-center gap-4 justify-center mb-10">
+                <div className="w-24 h-px bg-gradient-to-r from-transparent to-[#d4af37]/50" />
+                <div className="w-3 h-3 bg-[#d4af37] rotate-45 shadow-[0_0_10px_#d4af37]" />
+                <div className="w-24 h-px bg-gradient-to-l from-transparent to-[#d4af37]/50" />
+              </div>
 
-            <div className="w-16 h-16 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-6 border border-[#d4af37]/30">
-              <Eye className="w-8 h-8 text-[#d4af37]" />
-            </div>
-            <p className="text-xl text-[#E0E0E0] max-w-2xl mx-auto">
-              These timeless principles form the bedrock upon which our brotherhood stands, guiding 
-              every action and illuminating every path toward enlightenment.
-            </p>
+              <div className="w-24 h-24 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-8 border border-[#d4af37]/30 shadow-2xl">
+                <Eye className="w-12 h-12 text-[#d4af37]" />
+              </div>
+              <p className="text-xl text-[#E0E0E0] max-w-3xl mx-auto font-light leading-relaxed">
+                These timeless principles form the bedrock upon which our brotherhood stands, guiding 
+                every action and illuminating every path toward enlightenment.
+              </p>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -190,44 +193,45 @@ export default function TenetsPage() {
                 as we walk the path of enlightenment.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {pillars.map((pillar, index) => (
-                  <div 
-                    key={index} 
-                    className="relative overflow-hidden rounded-lg border border-[#d4af37]/20 group hover:border-[#d4af37]/40 transition-colors"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#0D2137] via-[#112240]/50 to-[#0D2137]" />
-                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/20 to-transparent" />
-                    
-                    <div className="relative p-6">
-                      <div className="flex items-start gap-4">
-                        {/* Number and Icon */}
-                        <div className="relative flex-shrink-0">
-                          <div className="w-16 h-16 rounded-lg bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/20 group-hover:bg-[#d4af37]/20 transition-colors">
-                            <pillar.icon className="w-7 h-7 text-[#d4af37]" />
+                  <ScrollReveal key={index} delay={index * 0.1}>
+                    <div 
+                      className="relative h-full overflow-hidden rounded-2xl border border-[#d4af37]/10 group hover:border-[#d4af37]/40 transition-all duration-500 shadow-xl hover:bg-[#0D1B2A] hover:-translate-y-2"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-[#0D2137] via-[#112240]/50 to-[#0D2137]" />
+                      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/20 to-transparent" />
+                      
+                      <div className="relative p-8">
+                        <div className="flex items-start gap-6">
+                          {/* Number and Icon */}
+                          <div className="relative flex-shrink-0">
+                            <div className="w-20 h-20 rounded-2xl bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/20 group-hover:bg-[#d4af37] transition-all duration-500">
+                              <pillar.icon className="w-10 h-10 text-[#d4af37] group-hover:text-[#0A1929]" />
+                            </div>
+                            <div className="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-[#d4af37] flex items-center justify-center text-sm font-bold text-[#0A1929] font-serif shadow-lg">
+                              {pillar.roman}
+                            </div>
                           </div>
-                          <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-[#d4af37] flex items-center justify-center text-xs font-bold text-[#0A1929] font-cinzel">
-                            {pillar.roman}
-                          </div>
-                        </div>
-                        
-                        {/* Content */}
-                        <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-[#FFFFFF] mb-2 font-cinzel">
-                            {pillar.title}
-                          </h3>
-                          <p className="text-[#E0E0E0] text-sm leading-relaxed mb-3">
-                            {pillar.description}
-                          </p>
-                          <div className="p-3 bg-[#0A1929] border-l-2 border-[#d4af37]/30 rounded-r">
-                            <p className="text-[#d4af37] italic text-xs">
-                              &ldquo;{pillar.principle}&rdquo;
+                          
+                          {/* Content */}
+                          <div className="flex-1">
+                            <h3 className="text-2xl font-bold text-[#FFFFFF] mb-3 font-serif group-hover:text-[#d4af37] transition-colors">
+                              {pillar.title}
+                            </h3>
+                            <p className="text-[#E0E0E0] text-base leading-relaxed mb-4 font-light">
+                              {pillar.description}
                             </p>
+                            <div className="p-4 bg-[#0A1929] border-l-4 border-[#d4af37] rounded-r-xl shadow-inner">
+                              <p className="text-[#d4af37] italic text-sm font-medium">
+                                &ldquo;{pillar.principle}&rdquo;
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </section>

@@ -38,7 +38,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center group">
             <div className="flex items-center gap-3">
               <div className="relative group">
-                <IlluminatiLogo size={40} />
+                <IlluminatiLogo size={48} />
                 <div className="absolute inset-0 rounded-full bg-[#d4af37]/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
               </div>
               <div className="hidden sm:block">
@@ -52,13 +52,13 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            <Link href="/" className="text-sm text-[#E0E0E0] hover:text-[#d4af37] transition-colors duration-300 font-medium tracking-wide py-2">
+            <Link href="/" className="text-base text-[#E0E0E0] hover:text-[#d4af37] transition-colors duration-300 font-medium tracking-wide py-2">
               Home
             </Link>
 
             {/* About Dropdown */}
             <div className="relative group">
-              <button className="text-sm transition-colors duration-300 flex items-center gap-1 cursor-pointer tracking-wide text-[#E0E0E0] hover:text-[#d4af37] py-2">
+              <button className="text-base transition-colors duration-300 flex items-center gap-1 cursor-pointer tracking-wide text-[#E0E0E0] hover:text-[#d4af37] py-2">
                 About
                 <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
               </button>
@@ -81,7 +81,7 @@ export default function Navigation() {
 
             {/* Membership Dropdown */}
             <div className="relative group">
-              <button className="text-sm transition-colors duration-300 flex items-center gap-1 cursor-pointer tracking-wide text-[#E0E0E0] hover:text-[#d4af37] py-2">
+              <button className="text-base transition-colors duration-300 flex items-center gap-1 cursor-pointer tracking-wide text-[#E0E0E0] hover:text-[#d4af37] py-2">
                 Membership
                 <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
               </button>
@@ -103,7 +103,7 @@ export default function Navigation() {
 
             {/* Philanthropy Dropdown */}
             <div className="relative group">
-              <button className="text-sm transition-colors duration-300 flex items-center gap-1 cursor-pointer tracking-wide text-[#E0E0E0] hover:text-[#d4af37] py-2">
+              <button className="text-base transition-colors duration-300 flex items-center gap-1 cursor-pointer tracking-wide text-[#E0E0E0] hover:text-[#d4af37] py-2">
                 Philanthropy
                 <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
               </button>
@@ -125,7 +125,7 @@ export default function Navigation() {
 
             {/* Resources Dropdown */}
             <div className="relative group">
-              <button className="text-sm transition-colors duration-300 flex items-center gap-1 cursor-pointer tracking-wide text-[#E0E0E0] hover:text-[#d4af37] py-2">
+              <button className="text-base transition-colors duration-300 flex items-center gap-1 cursor-pointer tracking-wide text-[#E0E0E0] hover:text-[#d4af37] py-2">
                 Resources
                 <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
               </button>
