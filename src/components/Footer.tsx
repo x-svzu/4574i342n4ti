@@ -140,7 +140,7 @@ export default function Footer() {
                 WhatsApp
               </a>
             </div>
-            <span>contact@illuminati-ny.org</span>
+            <span>illuminatilodgenewyork@gmail.com</span>
           </div>
         </div>
 

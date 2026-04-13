@@ -101,7 +101,7 @@ export default function ContactForm() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-[#FFFFFF] mb-1">Email</h3>
-              <p className="text-[#B0B0B0]">contact@illuminati-ny.org</p>
+              <p className="text-[#B0B0B0]">illuminatilodgenewyork@gmail.com</p>
             </div>
           </div>
 

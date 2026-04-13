@@ -97,7 +97,7 @@ export default function ContactPage() {
                   <Mail className="w-5 h-5 text-[#d4af37]" />
                 </div>
                 <h3 className="text-[#d4af37] font-semibold mb-2 font-cinzel text-sm">Email</h3>
-                <p className="text-[#E0E0E0] text-sm">contact@illuminati-ny.org</p>
+                <p className="text-[#E0E0E0] text-sm">illuminatilodgenewyork@gmail.com</p>
               </div>
             </div>
           </div>
