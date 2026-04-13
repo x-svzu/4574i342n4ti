@@ -76,7 +76,7 @@ export default function TermsOfServicePage() {
           <section>
             <h2 className="text-xl font-semibold text-[#FFFFFF] mb-4 font-cinzel">Contact</h2>
             <p>
-              For questions about these Terms of Service, contact us at legal@illuminati-ny.org.
+              For questions about these Terms of Service, contact us at illuminatilodgenewyork@gmail.com.
             </p>
           </section>
         </div>

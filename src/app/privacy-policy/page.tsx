@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl font-semibold text-[#FFFFFF] mb-4 font-cinzel">Contact Us</h2>
             <p>
-              For questions about this privacy policy or our data practices, contact us at privacy@illuminati-ny.org.
+              For questions about this privacy policy or our data practices, contact us at illuminatilodgenewyork@gmail.com.
             </p>
           </section>
         </div>

@@ -96,7 +96,7 @@ export default function CookiePolicyPage() {
           <section>
             <h2 className="text-xl font-semibold text-[#FFFFFF] mb-4 font-cinzel">Contact Us</h2>
             <p>
-              For questions about our use of cookies, contact us at privacy@illuminati-ny.org.
+              For questions about our use of cookies, contact us at illuminatilodgenewyork@gmail.com.
             </p>
           </section>
         </div>
