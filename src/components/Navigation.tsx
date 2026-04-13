@@ -55,11 +55,11 @@ export default function Navigation() {
                   <IlluminatiLogo size={48} />
                   <div className="absolute inset-0 rounded-full bg-[#d4af37]/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
                 </div>
-                <div className="hidden sm:block">
-                  <h1 className="font-cinzel text-lg font-semibold text-[#d4af37] tracking-wide leading-tight">
+                <div className="flex flex-col">
+                  <h1 className="font-cinzel text-base sm:text-lg font-semibold text-[#d4af37] tracking-wide leading-tight">
                     Illuminati Lodge
                   </h1>
-                  <p className="text-[10px] text-[#8a8a8a] tracking-[0.2em] font-cinzel mt-0.5">OF NEW YORK</p>
+                  <p className="text-[9px] sm:text-[10px] text-[#8a8a8a] tracking-[0.2em] font-cinzel mt-0.5">OF NEW YORK</p>
                 </div>
               </div>
             </a>
