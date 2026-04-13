@@ -50,7 +50,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-4 mb-6">
+            <a href="/" className="flex items-center gap-4 mb-6">
               <IlluminatiLogo size={48} />
               <div>
                 <h2 className="font-cinzel text-xl font-semibold text-[#d4af37] tracking-wide">
@@ -58,7 +58,7 @@ export default function Footer() {
                 </h2>
                 <p className="text-xs text-[#8a8a8a] tracking-[0.2em] font-cinzel">OF NEW YORK</p>
               </div>
-            </Link>
+            </a>
             <p className="text-[#B0B0B0] text-sm leading-relaxed mb-6 max-w-sm">
               For over two centuries, the Illuminati Lodge of New York has stood as a beacon of enlightenment, guiding seekers toward the light of knowledge, wisdom, and universal understanding.
             </p>

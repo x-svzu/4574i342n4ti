@@ -38,7 +38,7 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center group">
+            <a href="/" className="flex items-center group">
               <div className="flex items-center gap-3">
                 <div className="relative group">
                   <IlluminatiLogo size={48} />
@@ -51,13 +51,13 @@ export default function Navigation() {
                   <p className="text-[10px] text-[#8a8a8a] tracking-[0.2em] font-cinzel mt-0.5">OF NEW YORK</p>
                 </div>
               </div>
-            </Link>
+            </a>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-6">
-              <Link href="/" className="text-sm text-[#E0E0E0] hover:text-[#d4af37] transition-colors duration-300 font-medium tracking-wide py-2">
+              <a href="/" className="text-sm text-[#E0E0E0] hover:text-[#d4af37] transition-colors duration-300 font-medium tracking-wide py-2">
                 Home
-              </Link>
+              </a>
 
               {/* About Dropdown */}
               <div className="relative group">
@@ -173,13 +173,13 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[55] bg-[#0D2137] lg:hidden overflow-y-auto pt-4">
           <div className="px-6 py-4 space-y-6 pb-20">
-            <Link 
+            <a 
               href="/" 
               className="block text-xl font-bold text-[#FFFFFF] hover:text-[#d4af37] font-serif tracking-tight" 
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
-            </Link>
+            </a>
             
             <div className="space-y-3">
               <div className="text-[10px] font-bold text-[#d4af37] uppercase tracking-[0.4em] opacity-50 border-b border-[#d4af37]/10 pb-1">About</div>
