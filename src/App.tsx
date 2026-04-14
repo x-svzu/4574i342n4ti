@@ -4,6 +4,7 @@ import { AnimatePresence } from 'motion/react';
 import PageTransition from './components/PageTransition';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import { Toaster } from "@/components/ui/toaster";
 import HomePage from './app/page';
 import WhoWeAre from './app/who-we-are/page';
 import OurMission from './app/our-mission/page';
@@ -30,34 +31,37 @@ function AnimatedRoutes() {
       <div key={location.pathname}>
         <Routes location={location}>
           <Route path="/" element={<PageTransition><HomePage /></PageTransition>} />
-        <Route path="/who-we-are" element={<PageTransition><WhoWeAre /></PageTransition>} />
-        <Route path="/our-mission" element={<PageTransition><OurMission /></PageTransition>} />
-        <Route path="/tenets-and-purpose" element={<PageTransition><TenetsAndPurpose /></PageTransition>} />
-        <Route path="/our-history" element={<PageTransition><OurHistory /></PageTransition>} />
-        <Route path="/membership" element={<PageTransition><Membership /></PageTransition>} />
-        <Route path="/membership-rewards" element={<PageTransition><MembershipRewards /></PageTransition>} />
-        <Route path="/testimonials" element={<PageTransition><Testimonials /></PageTransition>} />
-        <Route path="/global-initiatives" element={<PageTransition><GlobalInitiatives /></PageTransition>} />
-        <Route path="/charity-programs" element={<PageTransition><CharityPrograms /></PageTransition>} />
-        <Route path="/faqs" element={<PageTransition><FAQs /></PageTransition>} />
-        <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
-        <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
-        <Route path="/terms-of-service" element={<PageTransition><TermsOfService /></PageTransition>} />
-        <Route path="/cookie-policy" element={<PageTransition><CookiePolicy /></PageTransition>} />
-        <Route path="/global-presence" element={<PageTransition><GlobalPresence /></PageTransition>} />
-        <Route path="/leadership" element={<PageTransition><Leadership /></PageTransition>} />
-      </Routes>
-    </div>
-  </AnimatePresence>
+          <Route path="/who-we-are" element={<PageTransition><WhoWeAre /></PageTransition>} />
+          <Route path="/our-mission" element={<PageTransition><OurMission /></PageTransition>} />
+          <Route path="/tenets-and-purpose" element={<PageTransition><TenetsAndPurpose /></PageTransition>} />
+          <Route path="/our-history" element={<PageTransition><OurHistory /></PageTransition>} />
+          <Route path="/membership" element={<PageTransition><Membership /></PageTransition>} />
+          <Route path="/membership-rewards" element={<PageTransition><MembershipRewards /></PageTransition>} />
+          <Route path="/testimonials" element={<PageTransition><Testimonials /></PageTransition>} />
+          <Route path="/global-initiatives" element={<PageTransition><GlobalInitiatives /></PageTransition>} />
+          <Route path="/charity-programs" element={<PageTransition><CharityPrograms /></PageTransition>} />
+          <Route path="/faqs" element={<PageTransition><FAQs /></PageTransition>} />
+          <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+          <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
+          <Route path="/terms-of-service" element={<PageTransition><TermsOfService /></PageTransition>} />
+          <Route path="/cookie-policy" element={<PageTransition><CookiePolicy /></PageTransition>} />
+          <Route path="/global-presence" element={<PageTransition><GlobalPresence /></PageTransition>} />
+          <Route path="/leadership" element={<PageTransition><Leadership /></PageTransition>} />
+        </Routes>
+      </div>
+    </AnimatePresence>
   );
 }
 
 export default function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <ScrollToTopButton />
-      <AnimatedRoutes />
-    </Router>
+    <div className="dark antialiased bg-background text-foreground min-h-screen">
+      <Router>
+        <ScrollToTop />
+        <ScrollToTopButton />
+        <AnimatedRoutes />
+      </Router>
+      <Toaster />
+    </div>
   );
 }
