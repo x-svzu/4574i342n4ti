@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { Crown, ChevronLeft, Eye } from "lucide-react";
 
 export default function LeadershipPage() {
@@ -37,6 +38,11 @@ export default function LeadershipPage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Leadership"
+        description="Meet the visionary leaders of the Illuminati Lodge of New York. Our leadership is composed of global architects, scholars, and guardians of ancient wisdom."
+        keywords="Illuminati leadership, Grand Master, Lodge governance, global leaders, visionaries, guardians of wisdom, elite leadership"
+      />
       <Navigation />
       
       <main className="pt-16">

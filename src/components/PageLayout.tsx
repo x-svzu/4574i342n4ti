@@ -7,16 +7,24 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
+import SEO from "@/components/SEO";
 
 interface PageLayoutProps {
   title: string;
   subtitle?: string;
+  description?: string;
+  keywords?: string;
   children: React.ReactNode;
 }
 
-export default function PageLayout({ title, subtitle, children }: PageLayoutProps) {
+export default function PageLayout({ title, subtitle, description, keywords, children }: PageLayoutProps) {
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title={title} 
+        description={description} 
+        keywords={keywords}
+      />
       <Navigation />
       
       <main className="pt-16">

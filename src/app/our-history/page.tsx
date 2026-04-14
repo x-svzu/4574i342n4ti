@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { 
   ArrowRight, 
   Calendar, 
@@ -80,6 +81,11 @@ export default function OurHistoryPage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Our History"
+        description="Trace the origins of the Illuminati Lodge of New York. From Bavaria in 1776 to the modern global brotherhood, discover our legacy of enlightenment."
+        keywords="Illuminati history, Adam Weishaupt, 1776, Bavaria, New York Lodge history, secret society origins, legacy of light"
+      />
       <Navigation />
       
       <main className="pt-16">

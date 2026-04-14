@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { 
   Sun, 
   Shield, 
@@ -84,6 +85,11 @@ export default function OurMissionPage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Our Mission"
+        description="Explore the sacred mission of the Illuminati Lodge of New York. We are dedicated to global enlightenment, the pursuit of truth, and the advancement of human potential."
+        keywords="Illuminati mission, global enlightenment, pursuit of truth, human potential, world peace, prosperity, brotherhood goals"
+      />
       <Navigation />
       
       <main className="pt-16">

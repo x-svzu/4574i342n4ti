@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 import { Globe, Users, Building, Award, ChevronLeft } from "lucide-react";
 
@@ -50,6 +51,11 @@ export default function GlobalPresencePage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Global Presence"
+        description="Discover the worldwide network of the Illuminati Lodge of New York. Our presence spans continents, uniting leaders and visionaries in a common goal."
+        keywords="Illuminati global presence, worldwide lodges, international brotherhood, global network, elite organization, world leaders"
+      />
       <Navigation />
       
       <main className="pt-16">

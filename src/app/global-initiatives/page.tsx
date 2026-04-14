@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 import { Globe, Heart, BookOpen, Users, TreePine, Droplets, ArrowRight, ChevronLeft } from "lucide-react";
 
@@ -69,6 +70,11 @@ export default function GlobalInitiativesPage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Global Initiatives"
+        description="Explore the global initiatives of the Illuminati Lodge of New York. We are leading the way in sustainable development, education, and humanitarian efforts worldwide."
+        keywords="Illuminati global initiatives, sustainable development, world education, humanitarian efforts, global impact, future of humanity"
+      />
       <Navigation />
       
       <main className="pt-16">

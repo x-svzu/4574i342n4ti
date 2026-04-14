@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { 
   Eye, 
   BookOpen, 
@@ -102,6 +103,11 @@ export default function TenetsPage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Tenets & Purpose"
+        description="Understand the core tenets and sacred purpose of the Illuminati Lodge of New York. We believe in the pursuit of knowledge, the power of unity, and the enlightenment of humanity."
+        keywords="Illuminati tenets, sacred purpose, core beliefs, enlightenment, unity, human potential, ancient wisdom, modern progress"
+      />
       <Navigation />
       
       <main className="pt-16">

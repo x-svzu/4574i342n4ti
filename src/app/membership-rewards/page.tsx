@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 import { Crown, Globe, Users, Heart, BookOpen, Shield, Star, Sparkles, ChevronLeft } from "lucide-react";
 
@@ -54,6 +55,11 @@ export default function MembershipRewardsPage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Membership Rewards"
+        description="Explore the exclusive rewards and benefits of being a member of the Illuminati Lodge of New York. From sacred knowledge to global networking and prosperity."
+        keywords="Illuminati rewards, membership benefits, exclusive access, global networking, prosperity secrets, elite rewards, sacred knowledge"
+      />
       <Navigation />
       
       <main className="pt-16">

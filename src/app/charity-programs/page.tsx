@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 import { Heart, GraduationCap, Stethoscope, Home, Utensils, Shirt, ChevronLeft } from "lucide-react";
 
@@ -50,6 +51,11 @@ export default function CharityProgramsPage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Charity Programs"
+        description="Learn about the global charity programs supported by the Illuminati Lodge of New York. We are committed to philanthropy, education, and healthcare for all."
+        keywords="Illuminati charity, global philanthropy, scholarship programs, healthcare initiatives, humanitarian aid, social impact"
+      />
       <Navigation />
       
       <main className="pt-16">

@@ -13,6 +13,7 @@ interface SEOProps {
   twitterDescription?: string;
   twitterImage?: string;
   canonical?: string;
+  jsonLd?: object;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -27,13 +28,27 @@ const SEO: React.FC<SEOProps> = ({
   twitterDescription,
   twitterImage,
   canonical,
+  jsonLd,
 }) => {
   const siteTitle = "Illuminati Lodge of New York";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   const defaultDescription = "The Illuminati Lodge of New York - A distinguished brotherhood dedicated to the pursuit of knowledge, enlightenment, and the betterment of humanity.";
-  const defaultKeywords = "Illuminati, enlightenment, New York, brotherhood, knowledge, wisdom, secret society";
+  const defaultKeywords = "Illuminati, official Illuminati website, how to join Illuminati, Illuminati New York, enlightenment, brotherhood, knowledge, wisdom, secret society, wealth, power, success, global elite, spiritual awakening, prosperity, global leadership, ancient wisdom, modern enlightenment, Illuminati members, Illuminati secrets";
   const defaultUrl = "https://illuminati-ny.org/";
   const defaultImage = "/logo.svg";
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Illuminati Lodge of New York",
+    "url": "https://illuminati-ny.org/",
+    "logo": "https://illuminati-ny.org/logo.svg",
+    "description": defaultDescription,
+    "sameAs": [
+      "https://twitter.com/illuminati_ny",
+      "https://facebook.com/illuminati_ny"
+    ]
+  };
 
   return (
     <Helmet>
@@ -57,6 +72,11 @@ const SEO: React.FC<SEOProps> = ({
 
       {/* Canonical Link */}
       {canonical && <link rel="canonical" href={canonical} />}
+
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(jsonLd || organizationJsonLd)}
+      </script>
     </Helmet>
   );
 };

@@ -4,6 +4,7 @@ import Link from "@/components/NextLink";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 import { Star, ChevronLeft, Quote } from "lucide-react";
 
@@ -55,6 +56,11 @@ export default function TestimonialsPage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Testimonials"
+        description="Read the experiences of our distinguished members. Discover how the Illuminati Lodge of New York has transformed lives through enlightenment and brotherhood."
+        keywords="Illuminati testimonials, member stories, personal transformation, enlightenment experiences, brotherhood reviews"
+      />
       <Navigation />
       
       <main className="pt-16">

@@ -5,12 +5,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQAccordion from "./FAQAccordion";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 import { ChevronLeft } from "lucide-react";
 
 export default function FAQsPage() {
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="FAQs"
+        description="Find answers to frequently asked questions about the Illuminati Lodge of New York. Learn about our mission, membership, and the truth behind common myths."
+        keywords="Illuminati FAQs, common questions, membership inquiries, Illuminati myths, truth about Illuminati, New York Lodge information"
+      />
       <Navigation />
       
       <main className="pt-16">
