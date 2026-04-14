@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { 
   Eye, Star, Shield, Users, BookOpen, Globe, Heart,
   Check, Award, Lock, Zap, Briefcase, Send, ChevronDown
@@ -123,6 +124,11 @@ export default function MembershipPage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Membership"
+        description="Join the Illuminati Lodge of New York. Apply for membership and begin your journey toward enlightenment, prosperity, and global brotherhood."
+        keywords="Illuminati membership, join Illuminati, enlightenment journey, New York brotherhood, membership benefits"
+      />
       <Navigation />
 
       {/* Hero Section - Clean */}

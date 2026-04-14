@@ -4,6 +4,7 @@ import Link from "@/components/NextLink";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { Eye, ChevronLeft, ArrowRight, Users, BookOpen, Star, Shield, Globe, Heart, Sparkles, Crown, Building } from "lucide-react";
 
 export default function WhoWeArePage() {
@@ -72,6 +73,11 @@ export default function WhoWeArePage() {
 
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Who We Are"
+        description="Discover the history, founding members, and global presence of the Illuminati Lodge of New York. Learn about our legacy of enlightenment since 1776."
+        keywords="Illuminati history, Adam Weishaupt, founding members, New York Lodge, ancient wisdom, global presence"
+      />
       <Navigation />
       
       {/* HERO SECTION */}

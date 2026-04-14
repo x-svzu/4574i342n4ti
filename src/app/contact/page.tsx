@@ -6,12 +6,18 @@ import Footer from "@/components/Footer";
 import ContactForm from "./ContactForm";
 import Link from "@/components/NextLink";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { ChevronLeft, MapPin, Phone, Mail } from "lucide-react";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with the Illuminati Lodge of New York. Reach out for inquiries, guidance, or to learn more about our distinguished brotherhood."
+        keywords="contact Illuminati, New York Lodge contact, enlightenment inquiries, brotherhood guidance"
+      />
       <Navigation />
       
       <main className="pt-16">

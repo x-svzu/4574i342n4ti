@@ -1,0 +1,64 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  canonical?: string;
+}
+
+const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords,
+  ogTitle,
+  ogDescription,
+  ogImage,
+  ogUrl,
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
+  canonical,
+}) => {
+  const siteTitle = "Illuminati Lodge of New York";
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+  const defaultDescription = "The Illuminati Lodge of New York - A distinguished brotherhood dedicated to the pursuit of knowledge, enlightenment, and the betterment of humanity.";
+  const defaultKeywords = "Illuminati, enlightenment, New York, brotherhood, knowledge, wisdom, secret society";
+  const defaultUrl = "https://illuminati-ny.org/";
+  const defaultImage = "/logo.svg";
+
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description || defaultDescription} />
+      <meta name="keywords" content={keywords || defaultKeywords} />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:title" content={ogTitle || fullTitle} />
+      <meta property="og:description" content={ogDescription || description || defaultDescription} />
+      <meta property="og:image" content={ogImage || defaultImage} />
+      <meta property="og:url" content={ogUrl || defaultUrl} />
+      <meta property="og:type" content="website" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={twitterTitle || ogTitle || fullTitle} />
+      <meta name="twitter:description" content={twitterDescription || ogDescription || description || defaultDescription} />
+      <meta name="twitter:image" content={twitterImage || ogImage || defaultImage} />
+
+      {/* Canonical Link */}
+      {canonical && <link rel="canonical" href={canonical} />}
+    </Helmet>
+  );
+};
+
+export default SEO;

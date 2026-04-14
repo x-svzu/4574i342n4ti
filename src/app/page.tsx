@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import IlluminatiLogo from "@/components/IlluminatiLogo";
 import ScrollReveal from "@/components/ScrollReveal";
 import { motion } from "motion/react";
+import SEO from "@/components/SEO";
 
 const tenets = [
   {
@@ -71,6 +72,11 @@ const philanthropyItems = [
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#0A1929]">
+      <SEO 
+        title="Home"
+        description="Welcome to the Illuminati Lodge of New York. Join a distinguished brotherhood dedicated to the pursuit of knowledge, enlightenment, and the betterment of humanity."
+        keywords="Illuminati, New York, enlightenment, brotherhood, wisdom, knowledge, global leaders"
+      />
       <Navigation />
 
       {/* Hero Section - Clean, no background image */}

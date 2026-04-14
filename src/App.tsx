@@ -4,7 +4,9 @@ import { AnimatePresence } from 'motion/react';
 import PageTransition from './components/PageTransition';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from "@/components/ui/toaster";
+import SEO from './components/SEO';
 import HomePage from './app/page';
 import WhoWeAre from './app/who-we-are/page';
 import OurMission from './app/our-mission/page';
@@ -55,13 +57,16 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <div className="dark antialiased bg-background text-foreground min-h-screen">
-      <Router>
-        <ScrollToTop />
-        <ScrollToTopButton />
-        <AnimatedRoutes />
-      </Router>
-      <Toaster />
-    </div>
+    <HelmetProvider>
+      <div className="dark antialiased bg-background text-foreground min-h-screen">
+        <SEO />
+        <Router>
+          <ScrollToTop />
+          <ScrollToTopButton />
+          <AnimatedRoutes />
+        </Router>
+        <Toaster />
+      </div>
+    </HelmetProvider>
   );
 }
